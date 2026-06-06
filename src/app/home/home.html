@@ -1,22 +1,91 @@
-<section class="hero">
-  <div class="hero-content">
-    <span class="paw">🐾</span>
-    <h1 class="hero-title">Pet<span>Store</span></h1>
-    <p class="hero-tagline">Sistema de gestión veterinaria</p>
-    <div class="divider"></div>
-    <p class="hero-description">
-      Plataforma web que centraliza los procesos clínicos y administrativos
-      de clínicas veterinarias: registro de pacientes, agenda de citas,
-      historial médico, inventario, facturación y analítica con inteligencia artificial.
-    </p>
-    <div class="features">
-      <div class="feature-chip"><span class="chip-icon">🐶</span> Registro de mascotas</div>
-      <div class="feature-chip"><span class="chip-icon">📅</span> Agenda de citas</div>
-      <div class="feature-chip"><span class="chip-icon">📋</span> Historial clínico</div>
-      <div class="feature-chip"><span class="chip-icon">📦</span> Inventario</div>
-      <div class="feature-chip"><span class="chip-icon">💳</span> Facturación</div>
-      <div class="feature-chip"><span class="chip-icon">🤖</span> Analítica con IA</div>
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-950 px-6 py-20 text-center">
+
+  <!-- background decorations -->
+  <div class="grid-bg"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- rotating ring -->
+  <div class="ring w-[700px] h-[700px] -top-40 -right-40 opacity-40" style="border-radius:50%"></div>
+  <div class="ring w-[400px] h-[400px] bottom-0 -left-20 opacity-20 animate-[spin_28s_linear_infinite_reverse]" style="border-radius:50%"></div>
+
+  <!-- floating paw -->
+  <div class="relative z-10 animate-float text-6xl mb-6 select-none"
+       style="filter:drop-shadow(0 0 24px rgba(34,211,238,.6))">🐾</div>
+
+  <!-- badge -->
+  <div class="relative z-10 animate-fade-up inline-flex items-center gap-2 rounded-full
+              border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold
+              uppercase tracking-widest text-cyan-300 mb-6 backdrop-blur-sm">
+    <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping-slow"></span>
+    Sistema de gestión veterinaria
+  </div>
+
+  <!-- title -->
+  <h1 class="relative z-10 animate-fade-up font-extrabold leading-none tracking-tight mb-4"
+      style="font-size: clamp(4rem, 12vw, 7rem)">
+    <span class="text-white">Pet</span><span class="text-gradient">Store</span>
+  </h1>
+
+  <!-- divider line -->
+  <div class="relative z-10 animate-fade-up-delay mx-auto mb-7 h-px w-24
+              bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+
+  <!-- description -->
+  <p class="relative z-10 animate-fade-up-delay max-w-xl text-base sm:text-lg leading-relaxed text-slate-300 mb-10">
+    Plataforma web modular que digitaliza los procesos clínicos y administrativos
+    de clínicas veterinarias: registro de pacientes, citas, historial médico,
+    inventario, facturación y analítica con <span class="text-cyan-300 font-semibold">inteligencia artificial</span>.
+  </p>
+
+  <!-- feature chips -->
+  <div class="relative z-10 animate-fade-up-slow flex flex-wrap justify-center gap-3 mb-14">
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      🐶 <span>Registro de mascotas</span>
+    </div>
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      📅 <span>Agenda de citas</span>
+    </div>
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      📋 <span>Historial clínico</span>
+    </div>
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      📦 <span>Inventario</span>
+    </div>
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      💳 <span>Facturación</span>
+    </div>
+    <div class="glass flex items-center gap-2 rounded-full px-4 py-2 text-sm text-slate-200
+                hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 cursor-default">
+      🤖 <span>Analítica con IA</span>
     </div>
   </div>
-  <p class="footer-note">Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026</p>
+
+  <!-- KPI row -->
+  <div class="relative z-10 animate-fade-up-slow grid grid-cols-3 gap-6 sm:gap-10">
+    <div class="text-center">
+      <div class="text-3xl sm:text-4xl font-extrabold text-gradient">16</div>
+      <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Meses</div>
+    </div>
+    <div class="text-center">
+      <div class="text-3xl sm:text-4xl font-extrabold text-gradient">$58M</div>
+      <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Presupuesto COP</div>
+    </div>
+    <div class="text-center">
+      <div class="text-3xl sm:text-4xl font-extrabold text-gradient">≥80%</div>
+      <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Cobertura QA</div>
+    </div>
+  </div>
+
+  <!-- footer note -->
+  <p class="absolute bottom-5 text-xs text-slate-600 tracking-wide">
+    Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
+  </p>
 </section>

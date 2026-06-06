@@ -1,248 +1,359 @@
-<div class="page">
-  <header class="page-header">
-    <h1>📋 Gerencia de Proyectos</h1>
-    <p>Acta de Constitución del Proyecto PetStore — Alcance · Tiempo · Costo · Calidad</p>
+<div class="relative min-h-screen bg-slate-950 text-slate-100">
+
+  <!-- bg -->
+  <div class="page-grid-bg"></div>
+  <div class="page-orb page-orb-1"></div>
+  <div class="page-orb page-orb-2"></div>
+
+  <!-- HEADER -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900
+                 px-6 py-14 text-center border-b border-white/10">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,.12),transparent_60%)]"></div>
+    <div class="relative z-10 animate-fade-up inline-flex items-center gap-2 rounded-full
+                border border-blue-400/30 bg-blue-400/10 px-4 py-1.5
+                text-xs font-semibold uppercase tracking-widest text-blue-300 mb-5 backdrop-blur-sm">
+      <span class="h-1.5 w-1.5 rounded-full bg-blue-400 animate-ping-slow"></span>
+      Acta de Constitución
+    </div>
+    <h1 class="relative z-10 animate-fade-up text-4xl sm:text-5xl font-extrabold tracking-tight mb-3
+               bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-cyan-400">
+      Gerencia de Proyectos
+    </h1>
+    <p class="relative z-10 animate-fade-up-delay text-slate-400 text-sm sm:text-base max-w-lg mx-auto">
+      Alcance · Tiempo · Costo · Calidad — Proyecto PetStore
+    </p>
   </header>
 
-  <div class="container">
+  <!-- CONTENT -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-6">
+
+    <!-- KPI strip -->
+    <div class="animate-scale-in grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
+        <div class="text-3xl font-extrabold bg-clip-text text-transparent
+                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">16</div>
+        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Meses</div>
+      </div>
+      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
+        <div class="text-3xl font-extrabold bg-clip-text text-transparent
+                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">$58M</div>
+        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">COP</div>
+      </div>
+      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
+        <div class="text-3xl font-extrabold bg-clip-text text-transparent
+                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">10</div>
+        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Fases</div>
+      </div>
+      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
+        <div class="text-3xl font-extrabold bg-clip-text text-transparent
+                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">≥80%</div>
+        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">QA</div>
+      </div>
+    </div>
 
     <!-- DATOS GENERALES -->
-    <div class="card">
-      <div class="card-title"><div class="ico">📄</div>Datos Generales del Proyecto</div>
-      <div class="info-grid">
-        <div class="info-item"><div class="lbl">Nombre</div><div class="val">PetStore – Ibagué, Tolima</div></div>
-        <div class="info-item"><div class="lbl">Cliente</div><div class="val">Veterinaria</div></div>
-        <div class="info-item"><div class="lbl">Contratista</div><div class="val">IngProg</div></div>
-        <div class="info-item"><div class="lbl">Sponsor</div><div class="val">Andres Felipe Cifuentes</div></div>
-        <div class="info-item"><div class="lbl">Gerente</div><div class="val">Lizeth Andrea Caro Silva</div></div>
-        <div class="info-item"><div class="lbl">Ciudad</div><div class="val">Ibagué, 03 de mayo de 2026</div></div>
-        <div class="info-item"><div class="lbl">Inicio</div><div class="val">01 de enero de 2025</div></div>
-        <div class="info-item"><div class="lbl">Entrega</div><div class="val">01 de mayo de 2026</div></div>
-        <div class="info-item"><div class="lbl">Duración</div><div class="val">16 meses</div></div>
-        <div class="info-item"><div class="lbl">Presupuesto</div><div class="val">$58.440.000 COP</div></div>
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📄</div>
+        <h2 class="text-base font-bold text-white">Datos Generales del Proyecto</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Nombre</div>
+          <div class="text-sm font-medium text-slate-200">PetStore – Ibagué</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Cliente</div>
+          <div class="text-sm font-medium text-slate-200">Veterinaria</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Contratista</div>
+          <div class="text-sm font-medium text-slate-200">IngProg</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Sponsor</div>
+          <div class="text-sm font-medium text-slate-200">A. Cifuentes</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Gerente</div>
+          <div class="text-sm font-medium text-slate-200">Lizeth Caro</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Inicio</div>
+          <div class="text-sm font-medium text-slate-200">01 ene 2025</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Entrega</div>
+          <div class="text-sm font-medium text-slate-200">01 may 2026</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Duración</div>
+          <div class="text-sm font-medium text-slate-200">16 meses</div>
+        </div>
+        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors col-span-2">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Presupuesto</div>
+          <div class="text-sm font-medium text-slate-200">$58.440.000 COP</div>
+        </div>
       </div>
     </div>
 
-    <!-- DESCRIPCIÓN -->
-    <div class="card">
-      <div class="card-title"><div class="ico">🐾</div>Descripción del Proyecto</div>
-      <p class="desc">
-        <strong>PetStore</strong> es un sistema de gestión veterinaria orientado a digitalizar
-        procesos clínicos y administrativos: registro de clientes y mascotas, agenda de citas,
-        historial médico, inventario, facturación y soporte operativo con analítica e IA.
-        Se concibe como una solución web modular con arquitectura por capas que escala
-        por fases (Alfa → Beta) sin romper lo construido.
-      </p>
-      <p class="desc">
-        El inicio del desarrollo de la plataforma web fue el <strong>01 de mayo de 2025</strong>.
-        El proyecto se ubica en el sector de Interlaken, Ciudad de Ibagué – Tolima.
-      </p>
-      <div class="tags">
-        <span class="tag">1. Elicitación</span>
-        <span class="tag">2. Análisis de Reqs. y UML</span>
-        <span class="tag">3. Métricas</span>
-        <span class="tag">4. Prototipo</span>
-        <span class="tag">5. Desarrollo Backend/BD/Frontend</span>
-        <span class="tag">6. Pruebas</span>
-        <span class="tag">7. Versión Alfa</span>
-        <span class="tag">8. Soporte</span>
-        <span class="tag">9. Versión Beta</span>
-        <span class="tag">10. Marketing y Cierre</span>
+    <!-- DESCRIPCIÓN + JUSTIFICACIÓN -->
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="glass-card p-6 animate-fade-up">
+        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🐾</div>
+          <h2 class="text-base font-bold text-white">Descripción</h2>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          <strong class="text-white">PetStore</strong> es un sistema de gestión veterinaria
+          orientado a digitalizar procesos clínicos y administrativos. Solución web modular
+          con arquitectura por capas que escala por fases (Alfa → Beta).
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">1. Elicitación</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">2. UML</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">3. Métricas</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">4. Prototipo</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">5. Desarrollo</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">6. Pruebas</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">7. Alfa</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">8. Soporte</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">9. Beta</span>
+          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">10. Cierre</span>
+        </div>
       </div>
-    </div>
-
-    <!-- JUSTIFICACIÓN -->
-    <div class="card">
-      <div class="card-title"><div class="ico">💡</div>Justificación del Proyecto</div>
-      <p class="desc">
-        El sector veterinario en Colombia ha experimentado crecimiento sostenido por el aumento
-        en la tenencia responsable de mascotas. Sin embargo, la mayoría de clínicas y consultorios,
-        especialmente mipymes, dependen de registros manuales o sistemas fragmentados que
-        limitan su eficiencia operativa y la calidad del servicio.
-      </p>
-      <p class="desc">
-        PetStore centraliza la información en una plataforma escalable y segura, reduciendo el
-        retrabajo, mejorando la experiencia del usuario y fortaleciendo la confianza en el
-        servicio veterinario. Es una iniciativa tecnológica viable, pertinente y de alto
-        impacto social.
-      </p>
+      <div class="glass-card p-6 animate-fade-up-delay">
+        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">💡</div>
+          <h2 class="text-base font-bold text-white">Justificación</h2>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          La mayoría de clínicas veterinarias, especialmente mipymes, dependen de registros
+          manuales o sistemas fragmentados. PetStore centraliza la información en una plataforma
+          escalable y segura, reduciendo el retrabajo y mejorando la experiencia del usuario.
+          <span class="text-cyan-300 font-medium">Iniciativa de alto impacto social.</span>
+        </p>
+      </div>
     </div>
 
     <!-- OBJETIVOS -->
-    <div class="card">
-      <div class="card-title"><div class="ico">🎯</div>Objetivos y Criterios de Éxito</div>
-      <table>
-        <thead>
-          <tr><th>Área</th><th>Objetivo</th><th>Criterio de Éxito</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alcance</td>
-            <td>Desarrollar y entregar la totalidad de los módulos: registro de clientes/mascotas, agenda, historial clínico, inventario, facturación y analítica con IA.</td>
-            <td>Aprobación formal de cada entregable por el cliente y el sponsor.</td>
-          </tr>
-          <tr>
-            <td>Tiempo</td>
-            <td>Ejecutar el proyecto en apego al cronograma del Diagrama de Gantt, respetando las 10 fases dentro de los 16 meses.</td>
-            <td>Lanzamiento de versión Beta antes del 01 de mayo de 2026 sin retrasos.</td>
-          </tr>
-          <tr>
-            <td>Costo</td>
-            <td>Cumplir el presupuesto aprobado de $58.440.000 COP, incluyendo la contingencia del 20% ($9.740.000).</td>
-            <td>No exceder el presupuesto total. Cualquier sobrecosto aprobado por el sponsor.</td>
-          </tr>
-          <tr>
-            <td>Calidad</td>
-            <td>Desarrollar bajo estándares de ingeniería: complejidad ciclomática, cobertura QA ≥ 80% y usabilidad validada.</td>
-            <td>Versión Beta con cobertura ≥ 80%, cero errores críticos en producción y aceptación UAT del cliente.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🎯</div>
+        <h2 class="text-base font-bold text-white">Objetivos y Criterios de Éxito</h2>
+      </div>
+      <div class="overflow-x-auto rounded-xl">
+        <table class="w-full text-sm data-table">
+          <thead>
+            <tr>
+              <th>Área</th><th>Objetivo</th><th>Criterio de Éxito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-bold text-cyan-400 whitespace-nowrap">Alcance</td>
+              <td>Desarrollar y entregar todos los módulos: registro, agenda, historial, inventario, facturación y IA.</td>
+              <td>Aprobación formal de cada entregable por el cliente y el sponsor.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-cyan-400 whitespace-nowrap">Tiempo</td>
+              <td>Ejecutar el proyecto en apego al cronograma Gantt, 10 fases en 16 meses.</td>
+              <td>Lanzamiento Beta antes del 01 may 2026 sin retrasos.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-cyan-400 whitespace-nowrap">Costo</td>
+              <td>Cumplir el presupuesto de $58.440.000 COP incluyendo contingencia 20%.</td>
+              <td>No exceder el presupuesto total. Sobrecostos aprobados por sponsor.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-cyan-400 whitespace-nowrap">Calidad</td>
+              <td>Complejidad ciclomática controlada, cobertura QA ≥ 80% y usabilidad validada.</td>
+              <td>Beta con ≥ 80% cobertura, cero errores críticos y aceptación UAT.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- CRONOGRAMA -->
-    <div class="card">
-      <div class="card-title"><div class="ico">📅</div>Cronograma de Fases</div>
-      <p class="desc">Duración total: 16 meses · 01 ene 2025 – 01 may 2026</p>
-      <div class="phase-list">
-        <div class="phase-item"><div class="phase-num">1</div><div class="phase-name">Elicitación</div><div class="phase-dur">Mes 1 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">2</div><div class="phase-name">Análisis de Requerimientos y Arquitectura UML</div><div class="phase-dur">Mes 2 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">3</div><div class="phase-name">Métricas de Desarrollo / Diseño / Arquitectura</div><div class="phase-dur">Mes 3–4 · 2 meses</div></div>
-        <div class="phase-item"><div class="phase-num">4</div><div class="phase-name">Prototipo</div><div class="phase-dur">Mes 3 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">5</div><div class="phase-name">Desarrollo Backend / BD / Frontend</div><div class="phase-dur">Mes 5–10 · 6 meses</div></div>
-        <div class="phase-item"><div class="phase-num">6</div><div class="phase-name">Pruebas y Corrección de Errores</div><div class="phase-dur">Mes 5 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">7</div><div class="phase-name">Lanzamiento Versión Alfa</div><div class="phase-dur">Mes 11 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">8</div><div class="phase-name">Soporte</div><div class="phase-dur">Mes 12–13 · 2 meses</div></div>
-        <div class="phase-item"><div class="phase-num">9</div><div class="phase-name">Lanzamiento Versión Beta</div><div class="phase-dur">Mes 14 · 1 mes</div></div>
-        <div class="phase-item"><div class="phase-num">10</div><div class="phase-name">Marketing, Publicidad y Cierre</div><div class="phase-dur">Mes 15–16 · 2 meses</div></div>
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📅</div>
+        <h2 class="text-base font-bold text-white">Cronograma de Fases</h2>
+        <span class="ml-auto text-xs text-slate-400">16 meses · ene 2025 – may 2026</span>
+      </div>
+      <div class="space-y-2">
+        @for (ph of phases; track ph.name; let i = $index) {
+          <div class="flex items-center gap-4 rounded-xl bg-white/[.04] border border-white/[.07]
+                      px-4 py-3 hover:bg-white/[.08] transition-all duration-200 group">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500
+                        flex items-center justify-center text-xs font-bold text-white
+                        flex-shrink-0 shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
+              {{i + 1}}
+            </div>
+            <span class="text-sm font-medium text-slate-200 flex-1">{{ph.name}}</span>
+            <span class="text-xs text-slate-500 whitespace-nowrap">{{ph.dur}}</span>
+          </div>
+        }
       </div>
     </div>
 
     <!-- PRESUPUESTO -->
-    <div class="card">
-      <div class="card-title"><div class="ico">💰</div>Presupuesto del Proyecto</div>
-      <table class="cost-table">
-        <thead><tr><th>Área</th><th style="text-align:right">Valor (COP)</th></tr></thead>
-        <tbody>
-          <tr><td>Ingeniería de Requisitos</td><td>$10.000.000</td></tr>
-          <tr><td>Gestión de Proyectos</td><td>$3.000.000</td></tr>
-          <tr><td>Ingeniería de Desarrollo</td><td>$24.000.000</td></tr>
-          <tr><td>QA – Aseguramiento de Calidad</td><td>$2.800.000</td></tr>
-          <tr><td>DevOps</td><td>$6.400.000</td></tr>
-          <tr><td>Marketing</td><td>$2.500.000</td></tr>
-        </tbody>
-        <tfoot>
-          <tr><td><strong>Subtotal</strong></td><td style="text-align:right"><strong>$48.700.000</strong></td></tr>
-          <tr><td>Contingencia (20%)</td><td style="text-align:right">$9.740.000</td></tr>
-          <tr><td><strong>TOTAL</strong></td><td><strong>$58.440.000</strong></td></tr>
-        </tfoot>
-      </table>
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">💰</div>
+        <h2 class="text-base font-bold text-white">Presupuesto del Proyecto</h2>
+      </div>
+      <div class="overflow-x-auto rounded-xl">
+        <table class="w-full text-sm data-table">
+          <thead>
+            <tr><th>Área</th><th class="text-right">Valor (COP)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Ingeniería de Requisitos</td><td class="text-right font-semibold text-slate-200">$10.000.000</td></tr>
+            <tr><td>Gestión de Proyectos</td><td class="text-right font-semibold text-slate-200">$3.000.000</td></tr>
+            <tr><td>Ingeniería de Desarrollo</td><td class="text-right font-semibold text-slate-200">$24.000.000</td></tr>
+            <tr><td>QA – Aseguramiento de Calidad</td><td class="text-right font-semibold text-slate-200">$2.800.000</td></tr>
+            <tr><td>DevOps</td><td class="text-right font-semibold text-slate-200">$6.400.000</td></tr>
+            <tr><td>Marketing</td><td class="text-right font-semibold text-slate-200">$2.500.000</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-slate-300">Subtotal</td>
+              <td class="px-4 py-3 text-right font-semibold text-slate-300">$48.700.000</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-slate-400">Contingencia (20%)</td>
+              <td class="px-4 py-3 text-right text-slate-400">$9.740.000</td>
+            </tr>
+            <tr class="bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-b-xl">
+              <td class="px-4 py-3 font-extrabold text-white text-base">TOTAL</td>
+              <td class="px-4 py-3 text-right font-extrabold text-cyan-300 text-base">$58.440.000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
 
-    <!-- ALCANCE -->
-    <div class="card">
-      <div class="card-title"><div class="ico">📐</div>Definición del Alcance</div>
-      <div class="scope-cols">
-        <div class="scope-col in">
-          <h4>✅ Incluido</h4>
-          <ul>
-            <li>Levantamiento y análisis de requerimientos</li>
-            <li>Diseño de la arquitectura del sistema</li>
-            <li>Diseño y validación del prototipo</li>
-            <li>Módulos: clientes, mascotas, citas, historial, inventario, facturación, IA</li>
-            <li>Implementación de base de datos</li>
-            <li>Pruebas y aseguramiento de calidad (QA)</li>
-            <li>Despliegue de versiones Alfa y Beta</li>
-            <li>Documentación técnica y funcional</li>
-            <li>Gestión y seguimiento del proyecto</li>
+    <!-- ALCANCE IN/OUT -->
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📐</div>
+        <h2 class="text-base font-bold text-white">Definición del Alcance</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">✅ Incluido</p>
+          <ul class="space-y-2">
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Levantamiento y análisis de requerimientos</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Diseño de arquitectura del sistema</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Diseño y validación del prototipo</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Módulos: clientes, citas, historial, inventario, facturación, IA</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Pruebas y aseguramiento de calidad QA</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Despliegue de versiones Alfa y Beta</li>
+            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Documentación técnica y funcional</li>
           </ul>
         </div>
-        <div class="scope-col out">
-          <h4>❌ Fuera del Alcance</h4>
-          <ul>
-            <li>Infraestructura física para clínicas</li>
-            <li>Equipos médicos veterinarios</li>
-            <li>Aplicación móvil nativa</li>
-            <li>Integración con pasarelas bancarias avanzadas</li>
-            <li>Operación comercial post-cierre</li>
-            <li>Soporte ilimitado tras entrega de versión Beta</li>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">❌ Fuera del Alcance</p>
+          <ul class="space-y-2">
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Infraestructura física para clínicas</li>
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Equipos médicos veterinarios</li>
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Aplicación móvil nativa</li>
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Integración con pasarelas bancarias avanzadas</li>
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Operación comercial post-cierre</li>
+            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Soporte ilimitado tras versión Beta</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- RIESGOS -->
-    <div class="card">
-      <div class="card-title"><div class="ico">⚠️</div>Riesgos del Proyecto</div>
-      <ul class="risk-list">
-        <li class="risk-item">⚠️ &nbsp;Rotación o falta de disponibilidad de miembros clave del equipo que afecte los tiempos de entrega.</li>
-        <li class="risk-item">⚠️ &nbsp;Cambios en los requisitos durante el desarrollo que generen retrabajo y aumenten costos y tiempo.</li>
-        <li class="risk-item">⚠️ &nbsp;Que el tiempo de alguna fase supere lo planificado, incrementando costos más allá de la contingencia del 20%.</li>
-        <li class="risk-item">⚠️ &nbsp;Fallas de seguridad o vulnerabilidades que comprometan datos sensibles de clientes, mascotas e historiales.</li>
-      </ul>
-    </div>
-
-    <!-- STAKEHOLDERS -->
-    <div class="card">
-      <div class="card-title"><div class="ico">👥</div>Grupos de Interés</div>
-      <div class="stake-grid">
-        <div class="stake-card">
-          <div class="stake-header">Sponsor / Inversionista</div>
-          <div class="stake-body"><strong>Andres Felipe Cifuentes</strong><span>Financia el proyecto, aprueba entregables principales y valida cambios de alcance.</span></div>
+    <!-- RIESGOS + STAKEHOLDERS -->
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="glass-card p-6 animate-fade-up">
+        <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500
+                      flex items-center justify-center text-lg shadow-lg shadow-amber-500/20">⚠️</div>
+          <h2 class="text-base font-bold text-white">Riesgos</h2>
         </div>
-        <div class="stake-card">
-          <div class="stake-header">Cliente / Usuario Final</div>
-          <div class="stake-body"><strong>Veterinaria</strong><span>Clínica veterinaria beneficiaria del sistema PetStore.</span></div>
-        </div>
-        <div class="stake-card">
-          <div class="stake-header">Gerente del Proyecto</div>
-          <div class="stake-body"><strong>Lizeth Andrea Caro Silva</strong><span>Responsable de planificación, ejecución, seguimiento y cierre.</span></div>
-        </div>
-        <div class="stake-card">
-          <div class="stake-header">Equipo de Desarrollo</div>
-          <div class="stake-body"><strong>J.C. Giraldo · C.S. Villada · J.D. Viña</strong><span>Diseño, construcción, pruebas y despliegue del sistema.</span></div>
-        </div>
+        <ul class="space-y-3">
+          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
+            Rotación o falta de disponibilidad de miembros clave del equipo.
+          </li>
+          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
+            Cambios en requisitos que generen retrabajo y aumenten costos.
+          </li>
+          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
+            Fases que superen lo planificado, excediendo la contingencia del 20%.
+          </li>
+          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
+            Vulnerabilidades que comprometan datos de clientes y mascotas.
+          </li>
+        </ul>
       </div>
-    </div>
 
-    <!-- RESTRICCIONES Y SUPUESTOS -->
-    <div class="card">
-      <div class="card-title"><div class="ico">📌</div>Restricciones y Supuestos</div>
-      <div class="two-col">
-        <div class="mini-card">
-          <h4>Restricciones</h4>
-          <ul>
-            <li>Cumplimiento estricto de fechas de entregables e hitos.</li>
-            <li>Presupuesto no debe exceder $58.440.000 COP (incluida contingencia del 20%).</li>
-            <li>Compatibilidad con los principales navegadores web.</li>
-          </ul>
+      <div class="glass-card p-6 animate-fade-up-delay">
+        <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">👥</div>
+          <h2 class="text-base font-bold text-white">Grupos de Interés</h2>
         </div>
-        <div class="mini-card">
-          <h4>Supuestos</h4>
-          <ul>
-            <li>El proyecto es viable técnica, operativa y económicamente.</li>
-            <li>El equipo estará disponible durante los 16 meses del cronograma.</li>
-            <li>El Sponsor cuenta con los recursos para el presupuesto completo.</li>
-          </ul>
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden border border-white/10">
+            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Sponsor</div>
+            <div class="px-3 py-2.5 bg-white/[.04]">
+              <strong class="text-sm text-white">Andres Felipe Cifuentes</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Financia, aprueba entregables y valida cambios.</p>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-white/10">
+            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Gerente</div>
+            <div class="px-3 py-2.5 bg-white/[.04]">
+              <strong class="text-sm text-white">Lizeth Andrea Caro Silva</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Planificación, ejecución, seguimiento y cierre.</p>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-white/10">
+            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Equipo Dev</div>
+            <div class="px-3 py-2.5 bg-white/[.04]">
+              <strong class="text-sm text-white">Giraldo · Villada · Viña</strong>
+              <p class="text-xs text-slate-400 mt-0.5">Diseño, construcción, pruebas y despliegue.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- FINANCIACIÓN -->
-    <div class="card">
-      <div class="card-title"><div class="ico">🏦</div>Fuentes de Financiación</div>
-      <p class="desc">
-        El proyecto se financia con recursos propios del Sponsor, <strong>Andres Felipe Cifuentes</strong>,
+    <div class="glass-card p-6 animate-fade-up">
+      <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
+                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🏦</div>
+        <h2 class="text-base font-bold text-white">Fuentes de Financiación</h2>
+      </div>
+      <p class="text-sm text-slate-300 leading-relaxed">
+        El proyecto se financia con recursos propios del Sponsor,
+        <strong class="text-white">Andres Felipe Cifuentes</strong>,
         Gerente General de IngProg – Tecnología Desarrollo Software. Presupuesto aprobado:
-        <strong>$58.440.000 COP</strong> (contingencia 20% = $9.740.000). No se contempla
-        financiación externa. Los desembolsos se realizarán por fases conforme al avance del
-        Diagrama de Gantt.
+        <span class="text-cyan-300 font-semibold">$58.440.000 COP</span>
+        (contingencia 20% = $9.740.000). No se contempla financiación externa.
+        Los desembolsos se realizarán por fases conforme al avance del Diagrama de Gantt.
       </p>
     </div>
 
   </div>
 
-  <footer>
-    <strong>PetStore</strong> · Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
+  <!-- FOOTER -->
+  <footer class="relative z-10 mt-10 border-t border-white/10 bg-slate-900/60 py-5 text-center
+                 text-xs text-slate-500 backdrop-blur-sm">
+    <strong class="text-slate-300">PetStore</strong> · Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
   </footer>
+
 </div>
