@@ -5,7 +5,7 @@ import { CalidadSoftware } from './calidad-software/calidad-software';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'gerencia-proyectos', component: GerenciaProyectos },
-  { path: 'calidad-software', component: CalidadSoftware },
+  { path: 'gerencia', component: GerenciaProyectos },
+  { path: 'calidad', component: CalidadSoftware },
   { path: '**', redirectTo: '' }
 ];

@@ -1,359 +1,700 @@
 <div class="relative min-h-screen bg-slate-950 text-slate-100">
 
-  <!-- bg -->
   <div class="page-grid-bg"></div>
   <div class="page-orb page-orb-1"></div>
   <div class="page-orb page-orb-2"></div>
 
   <!-- HEADER -->
   <header class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900
-                 px-6 py-14 text-center border-b border-white/10">
+                 px-6 py-10 text-center border-b border-white/10">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,.12),transparent_60%)]"></div>
     <div class="relative z-10 animate-fade-up inline-flex items-center gap-2 rounded-full
                 border border-blue-400/30 bg-blue-400/10 px-4 py-1.5
-                text-xs font-semibold uppercase tracking-widest text-blue-300 mb-5 backdrop-blur-sm">
+                text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4 backdrop-blur-sm">
       <span class="h-1.5 w-1.5 rounded-full bg-blue-400 animate-ping-slow"></span>
-      Acta de Constitución
+      TALLER GERENCIA DE PROYECTOS
     </div>
-    <h1 class="relative z-10 animate-fade-up text-4xl sm:text-5xl font-extrabold tracking-tight mb-3
+    <h1 class="relative z-10 animate-fade-up text-4xl sm:text-5xl font-extrabold tracking-tight mb-2
                bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-cyan-400">
       Gerencia de Proyectos
     </h1>
-    <p class="relative z-10 animate-fade-up-delay text-slate-400 text-sm sm:text-base max-w-lg mx-auto">
-      Alcance · Tiempo · Costo · Calidad — Proyecto PetStore
+    <p class="relative z-10 animate-fade-up-delay text-slate-400 text-sm max-w-xl mx-auto mb-1">
+      Sistema de Gestion Veterinaria PetStore · Ibague 2025–2026
     </p>
+    <p class="relative z-10 text-slate-500 text-xs">
+      Tutora: Angela Patricia Suarez Huertas · Universidad del Tolima · IDEAD
+    </p>
+    <div class="relative z-10 animate-scale-in mt-6 grid grid-cols-4 gap-3 max-w-lg mx-auto">
+      <div class="glass-card py-3 text-center">
+        <div class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">16</div>
+        <div class="text-[10px] text-slate-400 uppercase tracking-wide">Meses</div>
+      </div>
+      <div class="glass-card py-3 text-center">
+        <div class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">$58M</div>
+        <div class="text-[10px] text-slate-400 uppercase tracking-wide">COP</div>
+      </div>
+      <div class="glass-card py-3 text-center">
+        <div class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">10</div>
+        <div class="text-[10px] text-slate-400 uppercase tracking-wide">Fases</div>
+      </div>
+      <div class="glass-card py-3 text-center">
+        <div class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">80%</div>
+        <div class="text-[10px] text-slate-400 uppercase tracking-wide">QA Min.</div>
+      </div>
+    </div>
   </header>
 
-  <!-- CONTENT -->
-  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-6">
-
-    <!-- KPI strip -->
-    <div class="animate-scale-in grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
-        <div class="text-3xl font-extrabold bg-clip-text text-transparent
-                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">16</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Meses</div>
-      </div>
-      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
-        <div class="text-3xl font-extrabold bg-clip-text text-transparent
-                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">$58M</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">COP</div>
-      </div>
-      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
-        <div class="text-3xl font-extrabold bg-clip-text text-transparent
-                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">10</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Fases</div>
-      </div>
-      <div class="glass-card p-5 text-center hover:bg-white/10 transition-all duration-300 group">
-        <div class="text-3xl font-extrabold bg-clip-text text-transparent
-                    bg-gradient-to-r from-blue-300 to-cyan-400 group-hover:scale-110 transition-transform duration-300">≥80%</div>
-        <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">QA</div>
-      </div>
+  <!-- TAB BAR -->
+  <div class="sticky top-0 z-30 border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 flex gap-1 overflow-x-auto py-2">
+      @for (tab of tabs; track tab.id) {
+        <button
+          (click)="activeTab = tab.id"
+          class="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+          [class]="activeTab === tab.id
+            ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40 shadow-sm shadow-blue-500/20'
+            : 'text-slate-400 hover:text-slate-200 hover:bg-white/[.06]'">
+          {{tab.label}}
+        </button>
+      }
     </div>
+  </div>
 
-    <!-- DATOS GENERALES -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📄</div>
-        <h2 class="text-base font-bold text-white">Datos Generales del Proyecto</h2>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Nombre</div>
-          <div class="text-sm font-medium text-slate-200">PetStore – Ibagué</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Cliente</div>
-          <div class="text-sm font-medium text-slate-200">Veterinaria</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Contratista</div>
-          <div class="text-sm font-medium text-slate-200">IngProg</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Sponsor</div>
-          <div class="text-sm font-medium text-slate-200">A. Cifuentes</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Gerente</div>
-          <div class="text-sm font-medium text-slate-200">Lizeth Caro</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Inicio</div>
-          <div class="text-sm font-medium text-slate-200">01 ene 2025</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Entrega</div>
-          <div class="text-sm font-medium text-slate-200">01 may 2026</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Duración</div>
-          <div class="text-sm font-medium text-slate-200">16 meses</div>
-        </div>
-        <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3 hover:bg-white/10 transition-colors col-span-2">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Presupuesto</div>
-          <div class="text-sm font-medium text-slate-200">$58.440.000 COP</div>
-        </div>
-      </div>
-    </div>
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8">
 
-    <!-- DESCRIPCIÓN + JUSTIFICACIÓN -->
-    <div class="grid sm:grid-cols-2 gap-6">
-      <div class="glass-card p-6 animate-fade-up">
-        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🐾</div>
-          <h2 class="text-base font-bold text-white">Descripción</h2>
-        </div>
-        <p class="text-sm text-slate-300 leading-relaxed mb-4">
-          <strong class="text-white">PetStore</strong> es un sistema de gestión veterinaria
-          orientado a digitalizar procesos clínicos y administrativos. Solución web modular
-          con arquitectura por capas que escala por fases (Alfa → Beta).
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">1. Elicitación</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">2. UML</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">3. Métricas</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">4. Prototipo</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">5. Desarrollo</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">6. Pruebas</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">7. Alfa</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">8. Soporte</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">9. Beta</span>
-          <span class="text-[11px] rounded-full bg-blue-500/15 border border-blue-500/25 px-3 py-1 text-blue-300">10. Cierre</span>
-        </div>
-      </div>
-      <div class="glass-card p-6 animate-fade-up-delay">
-        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">💡</div>
-          <h2 class="text-base font-bold text-white">Justificación</h2>
-        </div>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          La mayoría de clínicas veterinarias, especialmente mipymes, dependen de registros
-          manuales o sistemas fragmentados. PetStore centraliza la información en una plataforma
-          escalable y segura, reduciendo el retrabajo y mejorando la experiencia del usuario.
-          <span class="text-cyan-300 font-medium">Iniciativa de alto impacto social.</span>
-        </p>
-      </div>
-    </div>
+    <!-- ═══ 1. PROYECTO ═══ -->
+    @if (activeTab === 'proyecto') {
+      <div class="space-y-6 animate-fade-up">
 
-    <!-- OBJETIVOS -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🎯</div>
-        <h2 class="text-base font-bold text-white">Objetivos y Criterios de Éxito</h2>
-      </div>
-      <div class="overflow-x-auto rounded-xl">
-        <table class="w-full text-sm data-table">
-          <thead>
-            <tr>
-              <th>Área</th><th>Objetivo</th><th>Criterio de Éxito</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="font-bold text-cyan-400 whitespace-nowrap">Alcance</td>
-              <td>Desarrollar y entregar todos los módulos: registro, agenda, historial, inventario, facturación y IA.</td>
-              <td>Aprobación formal de cada entregable por el cliente y el sponsor.</td>
-            </tr>
-            <tr>
-              <td class="font-bold text-cyan-400 whitespace-nowrap">Tiempo</td>
-              <td>Ejecutar el proyecto en apego al cronograma Gantt, 10 fases en 16 meses.</td>
-              <td>Lanzamiento Beta antes del 01 may 2026 sin retrasos.</td>
-            </tr>
-            <tr>
-              <td class="font-bold text-cyan-400 whitespace-nowrap">Costo</td>
-              <td>Cumplir el presupuesto de $58.440.000 COP incluyendo contingencia 20%.</td>
-              <td>No exceder el presupuesto total. Sobrecostos aprobados por sponsor.</td>
-            </tr>
-            <tr>
-              <td class="font-bold text-cyan-400 whitespace-nowrap">Calidad</td>
-              <td>Complejidad ciclomática controlada, cobertura QA ≥ 80% y usabilidad validada.</td>
-              <td>Beta con ≥ 80% cobertura, cero errores críticos y aceptación UAT.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- CRONOGRAMA -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📅</div>
-        <h2 class="text-base font-bold text-white">Cronograma de Fases</h2>
-        <span class="ml-auto text-xs text-slate-400">16 meses · ene 2025 – may 2026</span>
-      </div>
-      <div class="space-y-2">
-        @for (ph of phases; track ph.name; let i = $index) {
-          <div class="flex items-center gap-4 rounded-xl bg-white/[.04] border border-white/[.07]
-                      px-4 py-3 hover:bg-white/[.08] transition-all duration-200 group">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500
-                        flex items-center justify-center text-xs font-bold text-white
-                        flex-shrink-0 shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
-              {{i + 1}}
-            </div>
-            <span class="text-sm font-medium text-slate-200 flex-1">{{ph.name}}</span>
-            <span class="text-xs text-slate-500 whitespace-nowrap">{{ph.dur}}</span>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Datos Generales del Proyecto</h2>
           </div>
-        }
-      </div>
-    </div>
-
-    <!-- PRESUPUESTO -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">💰</div>
-        <h2 class="text-base font-bold text-white">Presupuesto del Proyecto</h2>
-      </div>
-      <div class="overflow-x-auto rounded-xl">
-        <table class="w-full text-sm data-table">
-          <thead>
-            <tr><th>Área</th><th class="text-right">Valor (COP)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Ingeniería de Requisitos</td><td class="text-right font-semibold text-slate-200">$10.000.000</td></tr>
-            <tr><td>Gestión de Proyectos</td><td class="text-right font-semibold text-slate-200">$3.000.000</td></tr>
-            <tr><td>Ingeniería de Desarrollo</td><td class="text-right font-semibold text-slate-200">$24.000.000</td></tr>
-            <tr><td>QA – Aseguramiento de Calidad</td><td class="text-right font-semibold text-slate-200">$2.800.000</td></tr>
-            <tr><td>DevOps</td><td class="text-right font-semibold text-slate-200">$6.400.000</td></tr>
-            <tr><td>Marketing</td><td class="text-right font-semibold text-slate-200">$2.500.000</td></tr>
-          </tbody>
-          <tfoot>
-            <tr class="border-t border-white/10">
-              <td class="px-4 py-3 font-semibold text-slate-300">Subtotal</td>
-              <td class="px-4 py-3 text-right font-semibold text-slate-300">$48.700.000</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 text-slate-400">Contingencia (20%)</td>
-              <td class="px-4 py-3 text-right text-slate-400">$9.740.000</td>
-            </tr>
-            <tr class="bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-b-xl">
-              <td class="px-4 py-3 font-extrabold text-white text-base">TOTAL</td>
-              <td class="px-4 py-3 text-right font-extrabold text-cyan-300 text-base">$58.440.000</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </div>
-
-    <!-- ALCANCE IN/OUT -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">📐</div>
-        <h2 class="text-base font-bold text-white">Definición del Alcance</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-6">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">✅ Incluido</p>
-          <ul class="space-y-2">
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Levantamiento y análisis de requerimientos</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Diseño de arquitectura del sistema</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Diseño y validación del prototipo</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Módulos: clientes, citas, historial, inventario, facturación, IA</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Pruebas y aseguramiento de calidad QA</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Despliegue de versiones Alfa y Beta</li>
-            <li class="flex gap-2 text-sm text-slate-300"><span class="text-emerald-400 font-bold mt-0.5">✓</span>Documentación técnica y funcional</li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">❌ Fuera del Alcance</p>
-          <ul class="space-y-2">
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Infraestructura física para clínicas</li>
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Equipos médicos veterinarios</li>
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Aplicación móvil nativa</li>
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Integración con pasarelas bancarias avanzadas</li>
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Operación comercial post-cierre</li>
-            <li class="flex gap-2 text-sm text-slate-400"><span class="text-rose-400 font-bold mt-0.5">✗</span>Soporte ilimitado tras versión Beta</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIESGOS + STAKEHOLDERS -->
-    <div class="grid sm:grid-cols-2 gap-6">
-      <div class="glass-card p-6 animate-fade-up">
-        <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500
-                      flex items-center justify-center text-lg shadow-lg shadow-amber-500/20">⚠️</div>
-          <h2 class="text-base font-bold text-white">Riesgos</h2>
-        </div>
-        <ul class="space-y-3">
-          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
-            Rotación o falta de disponibilidad de miembros clave del equipo.
-          </li>
-          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
-            Cambios en requisitos que generen retrabajo y aumenten costos.
-          </li>
-          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
-            Fases que superen lo planificado, excediendo la contingencia del 20%.
-          </li>
-          <li class="flex gap-3 rounded-xl bg-amber-500/10 border-l-2 border-amber-400 pl-3 pr-4 py-3 text-sm text-slate-300">
-            Vulnerabilidades que comprometan datos de clientes y mascotas.
-          </li>
-        </ul>
-      </div>
-
-      <div class="glass-card p-6 animate-fade-up-delay">
-        <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                      flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">👥</div>
-          <h2 class="text-base font-bold text-white">Grupos de Interés</h2>
-        </div>
-        <div class="space-y-3">
-          <div class="rounded-xl overflow-hidden border border-white/10">
-            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Sponsor</div>
-            <div class="px-3 py-2.5 bg-white/[.04]">
-              <strong class="text-sm text-white">Andres Felipe Cifuentes</strong>
-              <p class="text-xs text-slate-400 mt-0.5">Financia, aprueba entregables y valida cambios.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Nombre</div>
+              <div class="text-sm font-medium text-slate-200">PetStore – Sistema de Gestion Veterinaria</div>
             </div>
-          </div>
-          <div class="rounded-xl overflow-hidden border border-white/10">
-            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Gerente</div>
-            <div class="px-3 py-2.5 bg-white/[.04]">
-              <strong class="text-sm text-white">Lizeth Andrea Caro Silva</strong>
-              <p class="text-xs text-slate-400 mt-0.5">Planificación, ejecución, seguimiento y cierre.</p>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Tipo</div>
+              <div class="text-sm font-medium text-slate-200">Desarrollo de Software a medida</div>
             </div>
-          </div>
-          <div class="rounded-xl overflow-hidden border border-white/10">
-            <div class="bg-gradient-to-r from-blue-700/60 to-blue-600/60 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-200">Equipo Dev</div>
-            <div class="px-3 py-2.5 bg-white/[.04]">
-              <strong class="text-sm text-white">Giraldo · Villada · Viña</strong>
-              <p class="text-xs text-slate-400 mt-0.5">Diseño, construcción, pruebas y despliegue.</p>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Cliente</div>
+              <div class="text-sm font-medium text-slate-200">Clinica Veterinaria · Ibague, Tolima</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Contratista</div>
+              <div class="text-sm font-medium text-slate-200">IngProg – Tecnologia y Desarrollo Software</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Sponsor</div>
+              <div class="text-sm font-medium text-slate-200">Andres Felipe Cifuentes (Gerente IngProg)</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Gerente del Proyecto</div>
+              <div class="text-sm font-medium text-slate-200">Lizeth Andrea Caro Silva</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Fecha de Inicio</div>
+              <div class="text-sm font-medium text-slate-200">01 de enero de 2025</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Fecha de Entrega</div>
+              <div class="text-sm font-medium text-slate-200">01 de mayo de 2026</div>
+            </div>
+            <div class="rounded-xl bg-white/[.06] border border-white/[.08] p-3">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1">Presupuesto</div>
+              <div class="text-sm font-medium text-slate-200">$58.440.000 COP</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- FINANCIACIÓN -->
-    <div class="glass-card p-6 animate-fade-up">
-      <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500
-                    flex items-center justify-center text-lg shadow-lg shadow-blue-500/20">🏦</div>
-        <h2 class="text-base font-bold text-white">Fuentes de Financiación</h2>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Descripcion del Proyecto</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            PetStore es un sistema de informacion web para la gestion integral de clinicas veterinarias, desarrollado por el equipo
+            IngProg para una clinica en la ciudad de Ibague, Tolima. El sistema digitaliza todos los procesos administrativos y clinicos:
+            registro de pacientes y propietarios, agendamiento de citas con notificaciones automaticas, historial clinico electronico,
+            control de inventario con alertas de stock, facturacion digital y un modulo de inteligencia artificial para apoyo diagnostico.
+          </p>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            La clinica opera actualmente con registros manuales en papel y hojas de calculo desconectadas, lo que genera
+            <strong class="text-white">perdida de informacion clinica</strong>, errores frecuentes en la agenda de citas,
+            desabastecimiento de medicamentos e insumos, y demoras en la atencion a los pacientes.
+            PetStore resuelve estos problemas centralizando toda la informacion en una plataforma escalable, segura y accesible
+            desde cualquier dispositivo con navegador web.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-rose-500/5 border border-rose-500/15 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">Problemas que Resuelve</h3>
+              <ul class="space-y-1.5 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Registros manuales propensos a errores y perdidas</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Sin sistema de citas con recordatorios automaticos</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Control de inventario ineficiente con desabastecimiento</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Facturacion manual con errores contables</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Sin acceso al historial clinico en tiempo real</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-emerald-500/5 border border-emerald-500/15 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Beneficios</h3>
+              <ul class="space-y-1.5 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Reduccion del 80% en tiempo de busqueda</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Cero perdidas de citas por errores de agenda</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Control automatico de inventario con alertas</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Facturacion digital con reportes en tiempo real</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Historial clinico accesible desde cualquier dispositivo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Objetivo General</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Desarrollar e implementar un sistema de informacion web para la gestion integral de clinicas veterinarias en Ibague,
+            que digitalice los procesos de registro de clientes y mascotas, agendamiento de citas, manejo de historial clinico,
+            control de inventario y facturacion; cumpliendo con estandares de calidad ISO/IEC 25010, cobertura de pruebas minima
+            del 80%, entregado en 16 meses con presupuesto de $58.440.000 COP.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Entregables Principales</h2>
+          </div>
+          <div class="space-y-2">
+            @for (d of deliverables; track d.num) {
+              <div class="flex items-center gap-3 rounded-xl bg-white/[.04] border border-white/[.07] px-4 py-3">
+                <span class="w-7 h-7 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
+                  {{d.num}}
+                </span>
+                <span class="text-sm text-slate-300">{{d.desc}}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Stack Tecnologico</h2>
+          </div>
+          <div class="grid sm:grid-cols-4 gap-3">
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 text-center">
+              <div class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2">Backend Java</div>
+              <p class="text-xs text-slate-400">Java 17 · Spring Boot 3.x · Spring Security · JPA · JUnit 5</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 text-center">
+              <div class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2">Backend IA</div>
+              <p class="text-xs text-slate-400">Python · FastAPI · Modulo predictor</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 text-center">
+              <div class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2">Frontend</div>
+              <p class="text-xs text-slate-400">React · TypeScript · Tailwind CSS · Vitest</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 text-center">
+              <div class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2">BD / DevOps</div>
+              <p class="text-xs text-slate-400">MySQL 8 · Docker · CI/CD · JWT + BCrypt</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <p class="text-sm text-slate-300 leading-relaxed">
-        El proyecto se financia con recursos propios del Sponsor,
-        <strong class="text-white">Andres Felipe Cifuentes</strong>,
-        Gerente General de IngProg – Tecnología Desarrollo Software. Presupuesto aprobado:
-        <span class="text-cyan-300 font-semibold">$58.440.000 COP</span>
-        (contingencia 20% = $9.740.000). No se contempla financiación externa.
-        Los desembolsos se realizarán por fases conforme al avance del Diagrama de Gantt.
-      </p>
-    </div>
+    }
+
+    <!-- ═══ 2. ALCANCE / TIEMPO / COSTO ═══ -->
+    @if (activeTab === 'alcance') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Alcance del Proyecto</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Dentro del Alcance</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Levantamiento y analisis de requerimientos (ERS)</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Diseno de arquitectura del sistema y UML</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Diseno y validacion del prototipo</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Modulos: clientes, citas, historial, inventario, facturacion, IA</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Pruebas y aseguramiento de calidad QA</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Despliegue de versiones Alfa y Beta</li>
+                <li class="flex gap-2 text-sm text-slate-300 rounded-lg bg-emerald-500/5 border border-emerald-500/15 px-3 py-2"><span class="text-emerald-400 font-bold">+</span>Documentacion tecnica y funcional</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">Fuera del Alcance</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Infraestructura fisica para clinicas</li>
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Equipos medicos veterinarios</li>
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Aplicacion movil nativa (iOS / Android)</li>
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Integracion con pasarelas bancarias avanzadas</li>
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Operacion comercial post-cierre del proyecto</li>
+                <li class="flex gap-2 text-sm text-slate-400 rounded-lg bg-rose-500/5 border border-rose-500/15 px-3 py-2"><span class="text-rose-400 font-bold">–</span>Soporte ilimitado tras version Beta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Tiempo del Proyecto — Fases</h2>
+            <span class="ml-auto text-xs text-slate-400">16 meses · ene 2025 – may 2026</span>
+          </div>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>#</th><th>Fase</th><th>Duracion</th><th>Periodo</th></tr></thead>
+              <tbody>
+                @for (ph of phases; track ph.name; let i = $index) {
+                  <tr>
+                    <td class="text-center font-bold text-cyan-400">{{i + 1}}</td>
+                    <td>{{ph.name}}</td>
+                    <td class="whitespace-nowrap font-mono text-xs text-slate-400">{{ph.meses}} {{ph.meses === 1 ? 'mes' : 'meses'}}</td>
+                    <td class="whitespace-nowrap text-xs text-slate-400">{{ph.dur}}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Costo del Proyecto — Presupuesto</h2>
+          </div>
+          <div class="overflow-x-auto rounded-xl mb-4">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Area</th><th>Detalle</th><th class="text-right">Valor (COP)</th></tr></thead>
+              <tbody>
+                <tr><td class="font-semibold text-slate-200">Ingenieria de Requisitos</td><td class="text-slate-400">Elicitacion, analisis, ERS y diagramas UML</td><td class="text-right font-semibold text-slate-200">$10.000.000</td></tr>
+                <tr><td class="font-semibold text-slate-200">Gestion de Proyectos</td><td class="text-slate-400">Planificacion, control de avance y reportes</td><td class="text-right font-semibold text-slate-200">$3.000.000</td></tr>
+                <tr><td class="font-semibold text-slate-200">Ingenieria de Desarrollo</td><td class="text-slate-400">Backend Spring Boot + Python, Frontend React, IA</td><td class="text-right font-semibold text-slate-200">$24.000.000</td></tr>
+                <tr><td class="font-semibold text-slate-200">QA – Aseguramiento de Calidad</td><td class="text-slate-400">Pruebas unitarias, integracion, UAT, SonarQube</td><td class="text-right font-semibold text-slate-200">$2.800.000</td></tr>
+                <tr><td class="font-semibold text-slate-200">DevOps e Infraestructura</td><td class="text-slate-400">Servidores cloud, CI/CD, despliegue Alfa y Beta</td><td class="text-right font-semibold text-slate-200">$6.400.000</td></tr>
+                <tr><td class="font-semibold text-slate-200">Marketing y Publicidad</td><td class="text-slate-400">Estrategia de lanzamiento y capacitacion</td><td class="text-right font-semibold text-slate-200">$2.500.000</td></tr>
+              </tbody>
+              <tfoot>
+                <tr class="border-t border-white/10"><td class="px-4 py-3 font-semibold text-slate-300" colspan="2">Subtotal</td><td class="px-4 py-3 text-right font-semibold text-slate-300">$48.700.000</td></tr>
+                <tr><td class="px-4 py-3 text-slate-400" colspan="2">Contingencia (20%)</td><td class="px-4 py-3 text-right text-slate-400">$9.740.000</td></tr>
+                <tr class="bg-gradient-to-r from-blue-600/30 to-cyan-600/30">
+                  <td class="px-4 py-3 font-extrabold text-white" colspan="2">TOTAL APROBADO</td>
+                  <td class="px-4 py-3 text-right font-extrabold text-cyan-300">$58.440.000</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class="text-sm text-slate-400">
+            Financiado con recursos propios del Sponsor <strong class="text-slate-200">Andres Felipe Cifuentes</strong>.
+            Los desembolsos se realizan por fases conforme al avance del Diagrama de Gantt.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Criterios de Exito</h2>
+          </div>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Area</th><th>Criterio de Exito</th></tr></thead>
+              <tbody>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Alcance</td><td>Aprobacion formal de cada entregable por el cliente y el sponsor mediante acta de aceptacion.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Tiempo</td><td>Lanzamiento Beta antes del 01 de mayo de 2026 sin retrasos superiores al 10%.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Costo</td><td>No exceder el presupuesto total de $58.440.000 COP. Sobrecostos aprobados formalmente por el sponsor.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Calidad</td><td>Complejidad ciclomatica maxima 10 y cobertura de pruebas del 80% o mas.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Seguridad</td><td>Cero vulnerabilidades criticas detectadas en auditoria pre-lanzamiento Beta.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Usabilidad</td><td>Puntaje SUS (System Usability Scale) igual o mayor a 75 en pruebas UAT.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ═══ 3. CRONOGRAMA ═══ -->
+    @if (activeTab === 'cronograma') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Diagrama de Gantt</h2>
+            <span class="ml-auto text-xs text-slate-400">Mes 1 (ene 2025) → Mes 16 (may 2026)</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs border-collapse min-w-[700px]">
+              <thead>
+                <tr>
+                  <th class="text-left px-3 py-2 text-slate-400 font-medium w-36">Fase</th>
+                  @for (m of ganttMonths; track m) {
+                    <th class="px-1 py-2 text-center text-slate-500 font-mono font-normal w-8">{{m}}</th>
+                  }
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of ganttRows; track row.name; let i = $index) {
+                  <tr class="border-t border-white/[.05]">
+                    <td class="px-3 py-2 text-slate-300 whitespace-nowrap text-[11px]">{{row.name}}</td>
+                    @for (m of ganttMonths; track m) {
+                      <td class="px-0.5 py-2">
+                        @if (isActive(row, m)) {
+                          <div class="h-5 rounded"
+                               [class]="i % 2 === 0
+                                 ? 'bg-gradient-to-r from-blue-600/80 to-blue-500/60'
+                                 : 'bg-gradient-to-r from-cyan-600/80 to-cyan-500/60'">
+                          </div>
+                        } @else {
+                          <div class="h-5"></div>
+                        }
+                      </td>
+                    }
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Hitos Principales</h2>
+          </div>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Hito</th><th>Descripcion</th><th>Fecha</th></tr></thead>
+              <tbody>
+                <tr><td class="font-bold text-cyan-400">H-01</td><td>Aprobacion del Acta de Constitucion y ERS</td><td class="whitespace-nowrap">Febrero 2025</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-02</td><td>Arquitectura UML definida y aprobada</td><td class="whitespace-nowrap">Marzo 2025</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-03</td><td>Prototipo interactivo validado por el cliente</td><td class="whitespace-nowrap">Abril 2025</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-04</td><td>Backend y base de datos funcionales con pruebas</td><td class="whitespace-nowrap">Agosto 2025</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-05</td><td>Lanzamiento Version Alfa en produccion</td><td class="whitespace-nowrap">Noviembre 2025</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-06</td><td>Lanzamiento Version Beta con todos los modulos</td><td class="whitespace-nowrap">Febrero 2026</td></tr>
+                <tr><td class="font-bold text-cyan-400">H-07</td><td>Cierre formal y entrega de documentacion</td><td class="whitespace-nowrap">Mayo 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ═══ 4. ESTRUCTURA ORGANIZACIONAL ═══ -->
+    @if (activeTab === 'estructura') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Estructura Organizacional del Proyecto</h2>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02] flex items-center justify-center">
+            <img src="img/jerarquia.png" alt="Jerarquia organizacional del proyecto PetStore"
+                 class="w-full max-w-2xl block" />
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Roles y Responsabilidades</h2>
+          </div>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Rol</th><th>Responsabilidades</th></tr></thead>
+              <tbody>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Sponsor / Inversionista</td><td>Financiar el proyecto, aprobar entregables, validar cambios de alcance y presupuesto.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Gerente de Proyecto</td><td>Planificar, ejecutar, controlar y cerrar el proyecto. Coordinar el equipo y comunicarse con el sponsor y el cliente.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Cliente / Veterinaria</td><td>Definir y validar los requisitos del negocio, participar en pruebas UAT y aprobar los entregables.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Ing. Desarrollo</td><td>Diseno, implementacion y pruebas de los modulos del sistema (backend Java, Python IA y frontend React).</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">QA / DevOps</td><td>Planificar y ejecutar pruebas, gestionar SonarQube/JaCoCo y configurar pipelines CI/CD y despliegues.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Product Marketing</td><td>Estrategia de lanzamiento, material promocional, capacitacion del personal y cierre del proyecto.</td></tr>
+                <tr><td class="font-bold text-cyan-400 whitespace-nowrap">Ing. Requisitos</td><td>Elicitar, documentar y gestionar los requisitos funcionales y no funcionales del sistema (ERS, casos de uso).</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Grupos de Interes (Stakeholders)</h2>
+          </div>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Rol</th><th>Nombre</th><th>Responsabilidades</th><th>Influencia</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="font-bold text-cyan-400">Sponsor</td>
+                  <td class="font-medium text-white">Andres Felipe Cifuentes</td>
+                  <td>Financiar, aprobar entregables y validar cambios de alcance.</td>
+                  <td><span class="text-rose-400 font-semibold">Alta</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-cyan-400">Gerente de Proyecto</td>
+                  <td class="font-medium text-white">Lizeth Andrea Caro Silva</td>
+                  <td>Planificar, ejecutar, controlar y cerrar el proyecto.</td>
+                  <td><span class="text-rose-400 font-semibold">Alta</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-cyan-400">Equipo Desarrollador</td>
+                  <td class="font-medium text-white">Ing. Desarrollo · QA/DevOps · Ing. Requisitos</td>
+                  <td>Diseno, construccion, pruebas y despliegue del sistema.</td>
+                  <td><span class="text-amber-400 font-semibold">Media</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-cyan-400">Cliente Final</td>
+                  <td class="font-medium text-white">Personal de la Clinica Veterinaria</td>
+                  <td>Participar en pruebas UAT, validar requisitos y aceptar entregables.</td>
+                  <td><span class="text-rose-400 font-semibold">Alta</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-cyan-400">Product Marketing</td>
+                  <td class="font-medium text-white">Equipo de Marketing</td>
+                  <td>Estrategia de lanzamiento y capacitacion al cliente.</td>
+                  <td><span class="text-slate-400 font-semibold">Baja</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ═══ 5. RIESGOS ═══ -->
+    @if (activeTab === 'riesgos') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-amber-400 to-orange-400"></div>
+            <h2 class="font-bold text-white">Riesgos Identificados y Plan de Mitigacion</h2>
+          </div>
+          <div class="space-y-4">
+            @for (r of risks; track r.num) {
+              <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-5">
+                <div class="flex items-start gap-3 mb-3">
+                  <span class="rounded-lg bg-amber-500/20 border border-amber-500/30 px-2 py-1 text-[10px] font-bold text-amber-300 whitespace-nowrap flex-shrink-0">
+                    R-{{r.num}}
+                  </span>
+                  <p class="text-sm font-medium text-slate-200">{{r.desc}}</p>
+                </div>
+                <div class="flex gap-4 mb-3">
+                  <div class="rounded-lg bg-white/[.05] border border-white/[.06] px-3 py-1.5 text-xs">
+                    <span class="text-slate-500">Probabilidad: </span>
+                    <span [class]="r.prob === 'Alta' ? 'text-rose-400 font-bold' : r.prob === 'Media' ? 'text-amber-400 font-bold' : 'text-emerald-400 font-bold'">{{r.prob}}</span>
+                  </div>
+                  <div class="rounded-lg bg-white/[.05] border border-white/[.06] px-3 py-1.5 text-xs">
+                    <span class="text-slate-500">Impacto: </span>
+                    <span [class]="r.imp === 'Alto' ? 'text-rose-400 font-bold' : r.imp === 'Medio' ? 'text-amber-400 font-bold' : 'text-emerald-400 font-bold'">{{r.imp}}</span>
+                  </div>
+                </div>
+                <div class="rounded-lg bg-blue-500/10 border-l-2 border-blue-400 px-3 py-2 text-xs text-blue-200">
+                  <strong class="text-blue-100">Mitigacion: </strong>{{r.mit}}
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ═══ 6. EJECUCION ═══ -->
+    @if (activeTab === 'ejecucion') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Avance del Proyecto</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            El proyecto PetStore se encuentra actualmente en la fase de Desarrollo, con los modulos de backend (Java Spring Boot y Python IA)
+            y frontend (React) en construccion activa. Se han completado el levantamiento de requisitos, la arquitectura UML,
+            el prototipo interactivo y el diseno de metricas de calidad.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-xl bg-emerald-500/5 border border-emerald-500/15 p-4">
+              <div class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Completado</div>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-emerald-400">·</span>ERS y requisitos</li>
+                <li class="flex gap-2"><span class="text-emerald-400">·</span>Arquitectura UML</li>
+                <li class="flex gap-2"><span class="text-emerald-400">·</span>Prototipo validado</li>
+                <li class="flex gap-2"><span class="text-emerald-400">·</span>Estructura BD</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-amber-500/5 border border-amber-500/15 p-4">
+              <div class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">En Progreso</div>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Backend Java</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Backend Python IA</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Frontend React</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Pruebas QA</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-slate-500/5 border border-slate-500/15 p-4">
+              <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Pendiente</div>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-slate-400">·</span>Version Alfa</li>
+                <li class="flex gap-2"><span class="text-slate-400">·</span>Soporte y ajustes</li>
+                <li class="flex gap-2"><span class="text-slate-400">·</span>Version Beta</li>
+                <li class="flex gap-2"><span class="text-slate-400">·</span>Marketing y cierre</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Prototipo del Sistema</h2>
+            <span class="ml-auto text-xs text-slate-400">Pantallas del prototipo funcional</span>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Administracion de Mascotas</div>
+              <img src="img/prototipo_administracion_mascotas.png" alt="Prototipo administracion mascotas" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Administracion de Usuarios</div>
+              <img src="img/prototipo_administracion_usuarios.png" alt="Prototipo administracion usuarios" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Agendar Cita</div>
+              <img src="img/prototipo_agendar_cita.png" alt="Prototipo agendar cita" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Facturacion</div>
+              <img src="img/prototipo_facturacion.png" alt="Prototipo facturacion" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02] sm:col-span-2">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Administracion de Productos / Inventario</div>
+              <img src="img/prototipo_administracion_productos.png" alt="Prototipo administracion productos" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    }
+
+    <!-- ═══ 7. IMAGENES ═══ -->
+    @if (activeTab === 'imagenes') {
+      <div class="space-y-6 animate-fade-up">
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Estructura del Backend Java (Spring Boot)</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Estructura del Proyecto Backend Java</div>
+              <img src="img/estructura_backend_java.png" alt="Estructura backend Java" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Archivos de Test Backend Java</div>
+              <img src="img/archivo_tests_backend_java.png" alt="Archivos de tests backend Java" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Ubicacion de Tests Backend Java</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Backend Java</div>
+              <img src="img/ubicacion_test_backend_java.png" alt="Ubicacion tests backend Java" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Archivo Global Test Backend Java</div>
+              <img src="img/Archivo_global_test_backend_java.png" alt="Archivo global test backend Java" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Estructura Backend Python (IA) y Frontend React</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Estructura Backend Python – Modulo IA</div>
+              <img src="img/estructura_backend_python.png" alt="Estructura backend Python" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Estructura Frontend React</div>
+              <img src="img/estructura_frontend_react.png" alt="Estructura frontend React" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Tests Frontend React</h2>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Chatbot IA</div>
+              <img src="img/archivo_test_chatbot_front_react.png" alt="Test chatbot frontend" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Paginacion</div>
+              <img src="img/archivo_test_paginacion_front_react.png" alt="Test paginacion frontend" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Predictor IA</div>
+              <img src="img/archivo_test_predictor_front_react.png" alt="Test predictor frontend" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Ubicacion Tests Backend Python y Frontend React</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Backend Python</div>
+              <img src="img/ubicacion_tests_bakcend_python.png" alt="Ubicacion tests backend Python" class="w-full" />
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Frontend React</div>
+              <img src="img/ubicacion_test_front_react.png" alt="Ubicacion tests frontend React" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    }
 
   </div>
 
-  <!-- FOOTER -->
   <footer class="relative z-10 mt-10 border-t border-white/10 bg-slate-900/60 py-5 text-center
                  text-xs text-slate-500 backdrop-blur-sm">
-    <strong class="text-slate-300">PetStore</strong> · Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
+    <strong class="text-slate-300">PetStore</strong> · Universidad del Tolima · IDEAD · Ingenieria de Sistemas · 2026
+    · Tutora: Angela Patricia Suarez Huertas
   </footer>
 
 </div>
