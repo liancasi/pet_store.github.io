@@ -1,0 +1,349 @@
+<div class="page">
+  <header class="page-header">
+    <h1>🔬 Calidad de Software</h1>
+    <p>4 Informes técnicos aplicados al proyecto PetStore · Universidad del Tolima · IDEAD · 2026</p>
+  </header>
+
+  <div class="container">
+
+    <!-- AUTORES -->
+    <div class="authors-bar">
+      <span class="authors-label">Autores</span>
+      <span class="author-pill">Lizeth Andrea Caro Silva</span>
+      <span class="author-pill">Juan Camilo Giraldo Perdomo</span>
+      <span class="author-pill">Fran Jhover Guerrero Torres</span>
+      <span class="author-pill">Juan David Romero Arcos</span>
+      <span class="author-pill">Carlos Stiven Villada Quiceno</span>
+      <span class="author-pill">Tutor: German Hernandez Rengifo</span>
+    </div>
+
+    <!-- ═══════════ INFORME 1 ═══════════ -->
+    <div class="report-block" id="inf1">
+      <div class="report-header">
+        <div class="report-num">Inf. 1</div>
+        <div class="report-title">
+          <h2>Fundamentos de Calidad de Software</h2>
+          <p>Introducción a principios, normas y modelos de calidad aplicados al proyecto PetStore</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">📖</div>Descripción General</div>
+        <p class="desc">
+          El primer informe establece las bases conceptuales de la <strong>calidad de software</strong>
+          aplicada al proyecto PetStore. Aborda los estándares internacionales, modelos de calidad
+          y las métricas iniciales que guían el desarrollo de la plataforma veterinaria.
+          Se identifican los atributos de calidad clave con base en el estándar <strong>ISO/IEC 25010</strong>.
+        </p>
+        <div class="topics">
+          <span class="topic hl">ISO/IEC 25010</span>
+          <span class="topic hl">Modelos de Calidad</span>
+          <span class="topic">Atributos de Calidad</span>
+          <span class="topic">Métricas Iniciales</span>
+          <span class="topic">Requisitos de Calidad</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">⭐</div>Atributos de Calidad Identificados</div>
+        <div class="two-col">
+          <div class="mini-card">
+            <h4>Calidad Funcional</h4>
+            <ul>
+              <li>Completitud funcional de los módulos</li>
+              <li>Exactitud en el registro de datos clínicos</li>
+              <li>Adecuación funcional para veterinarios</li>
+              <li>Interoperabilidad entre módulos</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Calidad No Funcional</h4>
+            <ul>
+              <li>Fiabilidad del sistema en producción</li>
+              <li>Usabilidad para personal veterinario</li>
+              <li>Eficiencia en tiempos de respuesta</li>
+              <li>Mantenibilidad y portabilidad del código</li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight">
+          <strong>Meta de cobertura QA:</strong> El proyecto establece cobertura de pruebas
+          <strong>≥ 80%</strong> y cero errores críticos en producción al momento del lanzamiento Beta.
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ INFORME 2 ═══════════ -->
+    <div class="report-block" id="inf2">
+      <div class="report-header">
+        <div class="report-num">Inf. 2</div>
+        <div class="report-title">
+          <h2>Casos de Uso 2.0 y Trazabilidad: Del Requisito al Caso de Uso</h2>
+          <p>Gestión de requisitos · Casos de Uso · Modelo 4+1 de Kruchten · UML para Java</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">📋</div>Gestión de Requisitos</div>
+        <p class="desc">
+          Se documentaron los <strong>requisitos funcionales y no funcionales</strong> del sistema
+          PetStore orientados a los stakeholders. Cada requisito fue clasificado y justificado
+          según su impacto en el producto final.
+        </p>
+        <table>
+          <thead><tr><th>Tipo</th><th>Requisito</th><th>Módulo</th></tr></thead>
+          <tbody>
+            <tr><td>Funcional</td><td>Registro de clientes y mascotas con validación de datos</td><td>Registro</td></tr>
+            <tr><td>Funcional</td><td>Gestión de agenda de citas con notificaciones</td><td>Citas</td></tr>
+            <tr><td>Funcional</td><td>Consulta y actualización del historial clínico</td><td>Historial</td></tr>
+            <tr><td>Funcional</td><td>Control de inventario con alertas de stock mínimo</td><td>Inventario</td></tr>
+            <tr><td>Funcional</td><td>Generación de facturas y reportes financieros</td><td>Facturación</td></tr>
+            <tr><td>No Funcional</td><td>Tiempo de respuesta &lt; 2 segundos para operaciones críticas</td><td>Rendimiento</td></tr>
+            <tr><td>No Funcional</td><td>Autenticación segura con JWT y cifrado de contraseñas</td><td>Seguridad</td></tr>
+            <tr><td>No Funcional</td><td>Compatibilidad con principales navegadores web</td><td>Portabilidad</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">🔄</div>Casos de Uso 2.0 — Flujos Básico, Alternativo y de Excepción</div>
+        <div class="two-col">
+          <div class="mini-card">
+            <h4>Casos de Uso Principales</h4>
+            <ul>
+              <li>CU-01: Iniciar sesión (Login)</li>
+              <li>CU-02: Registrar cliente</li>
+              <li>CU-03: Registrar mascota</li>
+              <li>CU-04: Agendar cita veterinaria</li>
+              <li>CU-05: Consultar historial clínico</li>
+              <li>CU-06: Gestionar inventario</li>
+              <li>CU-07: Generar factura</li>
+              <li>CU-08: Administrar usuarios</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Diagramas UML Desarrollados</h4>
+            <ul>
+              <li>Diagrama de Casos de Uso — Login</li>
+              <li>Diagrama — Menú Principal y Adm. Mascota</li>
+              <li>Diagrama — Administración de Usuario y Facturación</li>
+              <li>Diagrama — Citas y Obtención de Datos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight">
+          Se construyó una <strong>Matriz de Trazabilidad</strong> que vincula cada requisito funcional
+          con su caso de uso, asegurando cobertura total y evitando requisitos huérfanos.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">🏗️</div>Modelo 4+1 de Kruchten y Arquitectura</div>
+        <div class="two-col">
+          <div class="mini-card">
+            <h4>Vistas del Modelo 4+1</h4>
+            <ul>
+              <li>Vista Lógica: estructura de clases y módulos</li>
+              <li>Vista de Proceso: flujo y concurrencia</li>
+              <li>Vista Física: despliegue en infraestructura web</li>
+              <li>Vista de Desarrollo: organización del código</li>
+              <li>Vista de Escenarios (+1): casos de uso clave</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Diagramas de Actividad</h4>
+            <ul>
+              <li>Diagrama de actividad — Registro de mascota</li>
+              <li>Diagrama de actividad — Agendamiento de cita</li>
+              <li>Diagrama de actividad — Proceso de facturación</li>
+              <li>UML para programadores Java (backend Spring Boot)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ INFORME 3 ═══════════ -->
+    <div class="report-block" id="inf3">
+      <div class="report-header">
+        <div class="report-num">Inf. 3</div>
+        <div class="report-title">
+          <h2>Código Limpio: Principios, Prácticas y Métricas de Calidad</h2>
+          <p>SOLID · DRY · Complejidad Ciclomática · Análisis Estático · Refactoring en PetStore</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">🧱</div>Principios SOLID y DRY en PetStore</div>
+        <table>
+          <thead><tr><th>Principio</th><th>Descripción</th><th>Aplicación en PetStore</th></tr></thead>
+          <tbody>
+            <tr><td>S — SRP</td><td>Single Responsibility Principle</td><td>Cada servicio (PetService, LoginService) tiene una única responsabilidad bien definida</td></tr>
+            <tr><td>O — OCP</td><td>Open/Closed Principle</td><td>La arquitectura permite agregar módulos sin modificar los existentes</td></tr>
+            <tr><td>L — LSP</td><td>Liskov Substitution Principle</td><td>Las implementaciones de interfaces son intercambiables sin alterar el comportamiento</td></tr>
+            <tr><td>I — ISP</td><td>Interface Segregation Principle</td><td>Interfaces separadas por dominio (mascotas, usuarios, facturación)</td></tr>
+            <tr><td>D — DIP</td><td>Dependency Inversion Principle</td><td>Inyección de dependencias en Spring Boot para desacoplar capas</td></tr>
+            <tr><td>DRY</td><td>Don't Repeat Yourself</td><td>Eliminación de código duplicado en validaciones y transformaciones de datos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">📊</div>Complejidad Ciclomática y Métricas de Calidad</div>
+        <table>
+          <thead><tr><th>Métrica</th><th>Umbral Aceptable</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Complejidad Ciclomática</td><td>≤ 10 por método</td><td>✅ Controlada</td></tr>
+            <tr><td>Duplicación de Código</td><td>&lt; 5%</td><td>✅ Reducida</td></tr>
+            <tr><td>Cobertura de Pruebas</td><td>≥ 80%</td><td>🔄 En progreso</td></tr>
+            <tr><td>Líneas por Método</td><td>≤ 20 líneas</td><td>✅ Controlada</td></tr>
+            <tr><td>Acoplamiento entre Clases</td><td>Bajo acoplamiento</td><td>✅ Adecuado</td></tr>
+          </tbody>
+        </table>
+        <div class="highlight">
+          <strong>Herramientas:</strong> SonarQube / SonarLint para análisis estático del backend
+          Java Spring Boot, y ESLint para el frontend React. Medición continua a lo largo del desarrollo.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">♻️</div>Clases, Concurrencia y Refinamiento</div>
+        <div class="two-col">
+          <div class="mini-card">
+            <h4>Clases Limpias</h4>
+            <ul>
+              <li>Alta cohesión: atributos y métodos relacionados</li>
+              <li>Bajo acoplamiento entre capas (Controller → Service → Repository)</li>
+              <li>DTOs para separar capas de presentación y persistencia</li>
+              <li>Manejo de errores con &#64;ControllerAdvice global</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Concurrencia y Refinamiento</h4>
+            <ul>
+              <li>Transacciones (&#64;Transactional) para consistencia de datos</li>
+              <li>Gestión segura de acceso concurrente a recursos</li>
+              <li>Refactoring disciplinado guiado por métricas SonarQube</li>
+              <li>Revisiones periódicas del código (code review)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ INFORME 4 ═══════════ -->
+    <div class="report-block" id="inf4">
+      <div class="report-header">
+        <div class="report-num">Inf. 4</div>
+        <div class="report-title">
+          <h2>Pruebas de Software</h2>
+          <p>TDD · JUnit 5 · JaCoCo · Pruebas Unitarias, Integración, Sistema y Automatizadas</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">🧪</div>Tipos de Pruebas de Software</div>
+        <div class="two-col">
+          <div class="mini-card">
+            <h4>Pruebas Unitarias</h4>
+            <ul>
+              <li>Verifican unidades individuales (métodos, clases)</li>
+              <li>Aisladas con mocking de dependencias (Mockito)</li>
+              <li>Implementadas con JUnit 5 en Spring Boot</li>
+              <li>Ejecutadas automáticamente en pipeline CI</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Pruebas de Integración</h4>
+            <ul>
+              <li>Interacción entre módulos del sistema</li>
+              <li>Comunicación entre capas Controller → Service → Repository</li>
+              <li>Pruebas de endpoints REST con datos reales</li>
+              <li>Base de datos H2 en memoria</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Pruebas de Sistema y Aceptación</h4>
+            <ul>
+              <li>Validación end-to-end de flujos principales</li>
+              <li>UAT con la Veterinaria cliente</li>
+              <li>Validación de atributos no funcionales</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h4>Caja Blanca · Gris · Negra</h4>
+            <ul>
+              <li>Blanca: lógica interna, ramas y condiciones Java</li>
+              <li>Gris: endpoints REST + respuesta de base de datos</li>
+              <li>Negra: flujos de usuario en la interfaz web (UAT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">🔁</div>TDD – Desarrollo Guiado por Pruebas</div>
+        <div class="highlight">
+          <strong>Ciclo TDD en PetStore:</strong><br><br>
+          🔴 <strong>Red:</strong> Escribir la prueba que falla primero (define el comportamiento esperado)<br>
+          🟢 <strong>Green:</strong> Implementar el código mínimo para que la prueba pase<br>
+          ♻️ <strong>Refactor:</strong> Mejorar el código manteniendo todas las pruebas en verde
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">⚙️</div>JUnit 5 — Estructura de las Pruebas</div>
+        <div class="code-box"><span class="ann">&#64;ExtendWith(MockitoExtension.class)</span>
+<span class="kw">class</span> <span class="cls">PetServiceTest</span> &#123;
+
+    <span class="ann">&#64;Mock</span>
+    <span class="kw">private</span> <span class="cls">PetRepository</span> petRepository;
+
+    <span class="ann">&#64;InjectMocks</span>
+    <span class="kw">private</span> <span class="cls">PetService</span> petService;
+
+    <span class="ann">&#64;Test</span>
+    <span class="kw">void</span> <span class="cls">shouldRegisterPetSuccessfully</span>() &#123;
+        <span class="cm">// Given</span>
+        <span class="cls">PetDTO</span> dto = <span class="kw">new</span> <span class="cls">PetDTO</span>(<span class="str">"Luna"</span>, <span class="str">"Perro"</span>, <span class="num">3</span>);
+        Mockito.when(petRepository.save(any())).thenReturn(savedPet);
+        <span class="cm">// When</span>
+        <span class="cls">Pet</span> result = petService.registerPet(dto);
+        <span class="cm">// Then</span>
+        assertThat(result.getName()).isEqualTo(<span class="str">"Luna"</span>);
+    &#125;
+&#125;</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="ico">📈</div>JaCoCo — Resultados de Cobertura</div>
+        <div class="test-result">
+          <span class="test-badge pass">PASS</span>
+          <span class="test-name">JwtTokenProviderTest.java</span>
+          <span class="test-count">14 pruebas</span>
+        </div>
+        <div class="test-result">
+          <span class="test-badge pass">PASS</span>
+          <span class="test-name">PetServiceTest.java</span>
+          <span class="test-count">12 pruebas</span>
+        </div>
+        <div class="test-result">
+          <span class="test-badge pass">PASS</span>
+          <span class="test-name">LoginServiceTest.java</span>
+          <span class="test-count">7 pruebas</span>
+        </div>
+        <div class="highlight" style="margin-top:.8rem">
+          <strong>Total:</strong> 33 pruebas unitarias · 3 clases de test.
+          Reporte generado con <code>mvn test jacoco:report</code> en
+          <code>target/site/jacoco/index.html</code>. Herramienta: JaCoCo 0.8.11.
+        </div>
+      </div>
+
+    </div><!-- /inf4 -->
+
+  </div><!-- /container -->
+
+  <footer>
+    <strong>PetStore</strong> · Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
+  </footer>
+</div>
