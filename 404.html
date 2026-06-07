@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PetStore</title>
+  <script>
+    // Redirect /repo/route → /repo/#/route so Angular hash-router can handle it
+    var segments = window.location.pathname.split('/').filter(Boolean);
+    // segments[0] = 'pet_store.github.io'  (repo)
+    // segments[1+] = the route path the user tried to access
+    var repoSlug = 'pet_store.github.io';
+    var idx = segments.indexOf(repoSlug);
+    var routeParts = idx >= 0 ? segments.slice(idx + 1) : [];
+    var routePath = routeParts.join('/');
+    var base = window.location.origin + '/' + repoSlug + '/';
+    window.location.replace(base + '#/' + routePath);
+  </script>
+</head>
+<body></body>
+</html>
