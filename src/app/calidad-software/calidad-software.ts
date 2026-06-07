@@ -34,7 +34,7 @@ export class CalidadSoftware {
     { nombre: 'Líneas por Método (LOC)',         umbral: '20 líneas o menos',        estado: 'Controlada',   nivel: 'ok'   },
     { nombre: 'Acoplamiento entre Clases (CBO)', umbral: 'Bajo acoplamiento',        estado: 'Adecuado',     nivel: 'ok'   },
     { nombre: 'Cohesión (LCOM)',                 umbral: 'Alta cohesión',            estado: 'Adecuado',     nivel: 'ok'   },
-    { nombre: 'Puntos Función Ajustados (AFP)',  umbral: 'Referencia de estimación', estado: 'Calculados',   nivel: 'ok'   },
+    { nombre: 'Puntos Función (UFP / AFP)',       umbral: 'UFP=500, VAF=1.13',        estado: '565 AFP',      nivel: 'ok'   },
   ];
 
   // Datos reales del Informe 4 — BUILD SUCCESS 26 PASSED (Java)

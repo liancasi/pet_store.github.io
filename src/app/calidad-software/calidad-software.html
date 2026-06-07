@@ -74,7 +74,7 @@
             <div class="rounded-xl bg-teal-500/5 border border-teal-500/15 p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Funcionalidad</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Completitud:</strong> el sistema cubre todos los requisitos funcionales definidos en el ERS.</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Completitud:</strong> el sistema cubre todos los requisitos funcionales definidos en el ERS (Especificación de Requisitos de Software).</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Correctitud:</strong> las funciones producen resultados exactos ante entradas validas.</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Apropiabilidad:</strong> las funciones satisfacen las tareas clínicas y administrativas del cliente.</li>
               </ul>
@@ -128,30 +128,96 @@
             </p>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            La estimación del tamaño funcional se realizo mediante la técnica de
-            <strong class="text-white">Puntos de Función No Ajustados (PFNA)</strong> según el estándar ISO/IEC 20926 (IFPUG).
-            Se identificaron las funciones de usuario y de datos de cada módulo:
+            La estimación del tamaño funcional se realizó mediante la técnica de
+            <strong class="text-white">Puntos de Función (IFPUG)</strong> según el estándar ISO/IEC 20926.
+            Se contaron 101 componentes funcionales distribuidos en 5 tipos, obteniéndose
+            <strong class="text-teal-300">500 UFP</strong> y, tras aplicar el Factor de Ajuste (VAF = 1.13),
+            <strong class="text-teal-300">565 AFP</strong>.
           </p>
+
+          <!-- Tabla UFP con ícono informativo -->
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Tabla de Conteo UFP</span>
+            <!-- ícono i con tooltip -->
+            <div class="relative group">
+              <div class="w-4 h-4 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center cursor-help">
+                <span class="text-[10px] font-extrabold text-blue-400 leading-none">i</span>
+              </div>
+              <div class="absolute left-6 top-0 z-50 hidden group-hover:block w-72 rounded-xl bg-slate-800 border border-white/10 shadow-2xl p-3 text-xs text-slate-300 leading-relaxed">
+                <p class="font-bold text-white mb-2">Tipos de componentes IFPUG</p>
+                <ul class="space-y-1.5">
+                  <li><strong class="text-teal-300">ILF</strong> — Internal Logical File: archivos de datos mantenidos dentro del sistema (tablas de BD propias).</li>
+                  <li><strong class="text-teal-300">EIF</strong> — External Interface File: datos de sistemas externos que PetStore solo consulta.</li>
+                  <li><strong class="text-teal-300">EI</strong> — External Input: transacciones que ingresan/modifican datos (formularios, CRUD).</li>
+                  <li><strong class="text-teal-300">EQ</strong> — External Query: consultas que recuperan datos sin transformarlos (listados, filtros).</li>
+                  <li><strong class="text-teal-300">EO</strong> — External Output: salidas con lógica de procesamiento (reportes, gráficos, IA).</li>
+                  <li class="pt-1 border-t border-white/10"><strong class="text-slate-200">Peso promedio</strong>: ponderación estándar IFPUG para complejidad media (ILF=10, EIF=7, EI=4, EQ=4, EO=5).</li>
+                  <li><strong class="text-slate-200">UFP</strong>: suma de Tipo × Peso. Con VAF 1.13 → <strong class="text-teal-300">AFP = 565</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div class="overflow-x-auto rounded-xl">
             <table class="w-full text-sm data-table">
-              <thead><tr><th>Módulo</th><th class="text-center">EI</th><th class="text-center">EO</th><th class="text-center">EQ</th><th class="text-center">ILF</th><th class="text-center">PFNA</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th class="text-center">Conteo</th>
+                  <th>Complejidad</th>
+                  <th class="text-center">Peso promedio</th>
+                  <th class="text-center">Total</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td class="font-medium text-slate-200">Registro de Clientes / Mascotas</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">5</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">42</td></tr>
-                <tr><td class="font-medium text-slate-200">Agenda de Citas</td><td class="text-center">5</td><td class="text-center">4</td><td class="text-center">6</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">52</td></tr>
-                <tr><td class="font-medium text-slate-200">Historial Clínico</td><td class="text-center">6</td><td class="text-center">5</td><td class="text-center">8</td><td class="text-center">3</td><td class="text-center font-bold text-teal-300">67</td></tr>
-                <tr><td class="font-medium text-slate-200">Control de Inventario</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">5</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">40</td></tr>
-                <tr><td class="font-medium text-slate-200">Facturación</td><td class="text-center">5</td><td class="text-center">6</td><td class="text-center">4</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">51</td></tr>
-                <tr><td class="font-medium text-slate-200">Módulo IA (recomendaciones)</td><td class="text-center">3</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">35</td></tr>
+                <tr>
+                  <td class="font-semibold text-slate-200">ILF <span class="text-[10px] text-slate-500 font-normal">— Archivos Internos</span></td>
+                  <td class="text-center font-mono">13</td>
+                  <td class="text-slate-400">Media</td>
+                  <td class="text-center font-mono">10</td>
+                  <td class="text-center font-bold text-teal-300">130</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-200">EIF <span class="text-[10px] text-slate-500 font-normal">— Interfaz Externa</span></td>
+                  <td class="text-center font-mono">1</td>
+                  <td class="text-slate-400">Media</td>
+                  <td class="text-center font-mono">7</td>
+                  <td class="text-center font-bold text-teal-300">7</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-200">EI <span class="text-[10px] text-slate-500 font-normal">— Entradas Externas</span></td>
+                  <td class="text-center font-mono">35</td>
+                  <td class="text-slate-400">Baja-Media</td>
+                  <td class="text-center font-mono">4</td>
+                  <td class="text-center font-bold text-teal-300">140</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-200">EQ <span class="text-[10px] text-slate-500 font-normal">— Consultas Externas</span></td>
+                  <td class="text-center font-mono">37</td>
+                  <td class="text-slate-400">Baja-Media</td>
+                  <td class="text-center font-mono">4</td>
+                  <td class="text-center font-bold text-teal-300">148</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-200">EO <span class="text-[10px] text-slate-500 font-normal">— Salidas Externas</span></td>
+                  <td class="text-center font-mono">15</td>
+                  <td class="text-slate-400">Media</td>
+                  <td class="text-center font-mono">5</td>
+                  <td class="text-center font-bold text-teal-300">75</td>
+                </tr>
               </tbody>
               <tfoot>
                 <tr class="bg-teal-500/10">
-                  <td class="px-4 py-3 font-extrabold text-white" colspan="5">TOTAL PFNA del Sistema</td>
-                  <td class="px-4 py-3 text-center font-extrabold text-teal-300">287</td>
+                  <td class="px-4 py-3 font-extrabold text-white" colspan="4">
+                    UFP Total &nbsp;·&nbsp;
+                    <span class="text-xs font-normal text-slate-400">VAF = 0.65 + 0.01 × ΣFi(48) = 1.13 → AFP = 565</span>
+                  </td>
+                  <td class="px-4 py-3 text-center font-extrabold text-teal-300">500</td>
                 </tr>
               </tfoot>
             </table>
           </div>
-          <p class="text-xs text-slate-500 mt-2">EI: Entradas Externas · EO: Salidas Externas · EQ: Consultas · ILF: Archivos Internos</p>
+          <p class="text-xs text-slate-500 mt-2">Fuente: Informe 1 — Pág. 17. Estándar IFPUG / ISO/IEC 20926. Pesos de complejidad media uniformes.</p>
         </div>
 
         <div class="glass-card p-6">
@@ -214,7 +280,7 @@
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
             El proceso de gestión de requisitos sigue el estándar
-            <strong class="text-white">IEEE 830 / IEEE 29148</strong> para la redacción del ERS.
+            <strong class="text-white">IEEE 830 / IEEE 29148</strong> para la redacción del ERS (Especificación de Requisitos de Software).
             Los requisitos se clasifican en funcionales y no funcionales, se priorizan usando MoSCoW y se gestionan con control de versiones.
           </p>
           <div class="grid sm:grid-cols-2 gap-4">
@@ -1139,7 +1205,7 @@
           <p class="text-[11px] font-extrabold uppercase tracking-widest text-cyan-400 mb-2">U1 — Métricas</p>
           <ul class="space-y-1 text-xs text-slate-300">
             <li class="flex gap-1"><span class="text-cyan-400">·</span>ISO/IEC 25010 — 8 atributos</li>
-            <li class="flex gap-1"><span class="text-cyan-400">·</span>287 Puntos Función (PFNA)</li>
+            <li class="flex gap-1"><span class="text-cyan-400">·</span>500 UFP · 565 AFP</li>
             <li class="flex gap-1"><span class="text-cyan-400">·</span>CC ≤ 10 controlada</li>
             <li class="flex gap-1"><span class="text-cyan-400">·</span>Cobertura JaCoCo 6%</li>
           </ul>
@@ -1192,8 +1258,8 @@
         <p class="text-xs font-bold uppercase tracking-widest text-teal-400 text-center mb-4">Resultado Global — PetStore como Software de Calidad</p>
         <div class="grid sm:grid-cols-4 gap-4 text-center mb-5">
           <div class="rounded-xl bg-white/[.04] p-3">
-            <div class="text-3xl font-extrabold text-cyan-300 mb-1">287</div>
-            <div class="text-xs text-slate-400">Puntos Función<br>No Ajustados</div>
+            <div class="text-3xl font-extrabold text-cyan-300 mb-1">500</div>
+            <div class="text-xs text-slate-400">UFP · 565 AFP<br>(VAF 1.13)</div>
           </div>
           <div class="rounded-xl bg-white/[.04] p-3">
             <div class="text-3xl font-extrabold text-emerald-300 mb-1">43</div>
