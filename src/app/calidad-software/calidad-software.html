@@ -111,6 +111,22 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Estimación mediante Puntos Función</h2>
           </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué son los Puntos de Función?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Los <strong class="text-white">Puntos de Función (IFPUG)</strong> son una técnica estandarizada (ISO/IEC 20926) para medir el
+              <strong class="text-white">tamaño funcional</strong> de un sistema desde la perspectiva del usuario,
+              independientemente del lenguaje o tecnología usada. Se identifican cinco tipos de componentes:
+              <strong class="text-slate-200">EI</strong> — formularios que el usuario envía;
+              <strong class="text-slate-200">EO</strong> — reportes o resultados calculados que el sistema devuelve;
+              <strong class="text-slate-200">EQ</strong> — búsquedas simples sin transformación de datos;
+              <strong class="text-slate-200">ILF</strong> — tablas principales mantenidas por el sistema;
+              <strong class="text-slate-200">EIF</strong> — datos de sistemas externos consumidos.
+              Cada componente se pondera según su complejidad (baja / media / alta) y la suma da los
+              <strong class="text-white">Puntos de Función No Ajustados (PFNA)</strong>. Con ese número se puede
+              estimar esfuerzo, costo y duración del proyecto antes de escribir una sola línea de código.
+            </p>
+          </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
             La estimación del tamaño funcional se realizo mediante la técnica de
             <strong class="text-white">Puntos de Función No Ajustados (PFNA)</strong> según el estándar ISO/IEC 20926 (IFPUG).
@@ -233,6 +249,18 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Casos de Uso 2.0</h2>
           </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué es Casos de Uso 2.0?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Propuesta por <strong class="text-white">Ivar Jacobson (2011)</strong> como evolución de los Casos de Uso clásicos de UML,
+              <strong class="text-white">Casos de Uso 2.0</strong> organiza la funcionalidad del sistema en porciones más pequeñas y accionables
+              llamadas <strong class="text-slate-200">rebanadas de caso de uso (use case slices)</strong>. Cada rebanada describe una
+              parte concreta del caso de uso que entrega valor real y puede ser implementada, probada y
+              desplegada de forma independiente. Esto facilita la planificación iterativa e incremental:
+              en lugar de especificar todo antes de desarrollar, el equipo trabaja rebanada a rebanada,
+              entregando valor al cliente en cada iteración y ajustando los requisitos según la retroalimentación recibida.
+            </p>
+          </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
             Se aplica la técnica de <strong class="text-white">Casos de Uso 2.0 (Ivar Jacobson)</strong>, que organiza la funcionalidad
             en rebanadas (use case slices) para la entrega incremental de valor.
@@ -274,6 +302,20 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Modelo 4+1 de Kruchten Aplicado a PetStore</h2>
           </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué es el Modelo 4+1?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Propuesto por <strong class="text-white">Philippe Kruchten en 1995</strong>, el Modelo 4+1 describe la arquitectura de un sistema
+              de software desde <strong class="text-white">cinco perspectivas complementarias</strong>, cada una orientada a un stakeholder diferente.
+              Las cuatro vistas principales son: <strong class="text-slate-200">Vista Lógica</strong> — estructura de clases y componentes para el desarrollador;
+              <strong class="text-slate-200">Vista de Proceso</strong> — flujo de ejecución y concurrencia para analistas de rendimiento;
+              <strong class="text-slate-200">Vista de Implementación</strong> — organización del código fuente para el equipo de desarrollo;
+              <strong class="text-slate-200">Vista Física</strong> — despliegue en infraestructura para operaciones.
+              La quinta vista, <strong class="text-white">Escenarios (+1)</strong>, usa casos de uso para ilustrar y validar cómo interactúan las
+              cuatro anteriores. Juntas ofrecen una descripción arquitectónica completa que puede comunicarse a
+              todos los involucrados del proyecto sin importar su perfil técnico.
+            </p>
+          </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista Lógica</h3>
@@ -289,7 +331,7 @@
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista Fisica</h3>
-              <p class="text-sm text-slate-300">Servidor cloud: Backend Spring Boot en Docker, base de datos MySQL administrada, frontend React en CDN/hosting estático.</p>
+              <p class="text-sm text-slate-300">Servidor cloud: Backend Spring Boot en Docker, base de datos PostgreSQL administrada, frontend React en CDN/hosting estático.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 sm:col-span-2">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Vista de Escenarios (+1)</h3>
@@ -301,7 +343,21 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Errores Comunes y Optimizacion del Análisis y Diseño</h2>
+            <h2 class="font-bold text-white">Errores Comunes y Optimización del Análisis y Diseño</h2>
+          </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Por qué importa detectarlos temprano?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              En ingeniería de software, los errores cometidos en las fases de análisis y diseño son los más costosos de corregir:
+              un requisito mal especificado descubierto en producción puede costar hasta
+              <strong class="text-white">200 veces más</strong> que si se hubiera detectado en la fase inicial (Boehm, 1981).
+              Los errores más frecuentes incluyen: requisitos ambiguos sin criterios de aceptación; clases con múltiples
+              responsabilidades (violación del SRP); acoplamiento alto entre capas que impide la reutilización;
+              diseño "big bang" sin iteraciones ni validación temprana; y ausencia de trazabilidad entre requisitos y código.
+              La <strong class="text-white">optimización del análisis y diseño</strong> implica aplicar revisiones formales
+              (walkthroughs), prototipado rápido, pruebas de arquitectura y retroalimentación continua del cliente para
+              detectar y corregir estos errores antes de que se conviertan en deuda técnica irreversible.
+            </p>
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-rose-500/5 border border-rose-500/15 p-4">
@@ -356,6 +412,22 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Principios SOLID y DRY aplicados a PetStore</h2>
           </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué son SOLID y DRY?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <strong class="text-white">SOLID</strong> es un acrónimo propuesto por <strong class="text-white">Robert C. Martin</strong>
+              que reúne cinco principios de diseño orientado a objetos para crear software mantenible y escalable:
+              <strong class="text-slate-200">S</strong> (Single Responsibility) — una clase, una sola razón para cambiar;
+              <strong class="text-slate-200">O</strong> (Open/Closed) — abierto a extensión, cerrado a modificación;
+              <strong class="text-slate-200">L</strong> (Liskov Substitution) — las subclases deben poder reemplazar a sus superclases sin alterar el comportamiento;
+              <strong class="text-slate-200">I</strong> (Interface Segregation) — interfaces específicas en lugar de una genérica;
+              <strong class="text-slate-200">D</strong> (Dependency Inversion) — depender de abstracciones, no de implementaciones concretas.
+              <strong class="text-white">DRY</strong> (<em>Don't Repeat Yourself</em>) complementa SOLID estableciendo que cada pieza de
+              conocimiento debe tener una única representación en el sistema — la duplicación de lógica es la
+              raíz de la mayoría de los errores de mantenimiento. Aplicar SOLID + DRY reduce el acoplamiento,
+              aumenta la cohesión y hace que el código sea testeable de forma unitaria.
+            </p>
+          </div>
           <div class="space-y-3">
             @for (s of solid; track s.sigla) {
               <div class="rounded-xl bg-white/[.04] border border-white/[.07] p-4">
@@ -397,6 +469,22 @@
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Reglas de Código Limpio en la Implementación</h2>
+          </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué es Código Limpio?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              El libro <strong class="text-white">Clean Code: A Handbook of Agile Software Craftsmanship</strong>
+              (Robert C. Martin, 2008) sistematiza las prácticas que distinguen el código profesional del código que
+              "simplemente funciona". Sus principios centrales son: <strong class="text-slate-200">nombres expresivos</strong> que
+              revelan intención sin necesidad de comentarios; <strong class="text-slate-200">funciones pequeñas</strong> con un único
+              propósito (máximo ~20 líneas); <strong class="text-slate-200">comentarios solo para el "por qué"</strong> no obvio —
+              nunca para explicar qué hace el código; <strong class="text-slate-200">manejo explícito de errores</strong> sin excepciones
+              silenciosas; y <strong class="text-slate-200">estructura en capas</strong> con responsabilidades claras. La métrica
+              principal para medir la limpieza es la <strong class="text-white">Complejidad Ciclomática de McCabe (CC)</strong>:
+              un valor ≤ 10 por método garantiza que el código es testeable, legible y mantenible. El código limpio
+              reduce la deuda técnica, facilita el onboarding de nuevos desarrolladores y es prerequisito
+              para la sostenibilidad del proyecto a largo plazo.
+            </p>
           </div>
           <div class="grid sm:grid-cols-3 gap-4 mb-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
@@ -655,6 +743,26 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <h2 class="font-bold text-white">Resultados de Pruebas Unitarias (JUnit 5)</h2>
           </div>
+          <div class="rounded-xl bg-blue-500/5 border border-blue-500/10 p-4 mb-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">¿Qué son las pruebas unitarias con JUnit 5?</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <strong class="text-white">JUnit 5</strong> es el framework estándar de pruebas unitarias para Java, compuesto por tres módulos:
+              <strong class="text-slate-200">JUnit Platform</strong> (motor de ejecución en la JVM),
+              <strong class="text-slate-200">JUnit Jupiter</strong> (nueva API con anotaciones como
+              <code class="text-teal-300 text-xs bg-white/5 px-1 rounded">@Test</code>,
+              <code class="text-teal-300 text-xs bg-white/5 px-1 rounded">@BeforeEach</code>,
+              <code class="text-teal-300 text-xs bg-white/5 px-1 rounded">@ParameterizedTest</code>) y
+              <strong class="text-slate-200">JUnit Vintage</strong> (compatibilidad con JUnit 3/4).
+              Una <strong class="text-white">prueba unitaria</strong> verifica el comportamiento de una única unidad de código (método o clase)
+              de forma aislada, usando <strong class="text-white">Mockito</strong> para simular dependencias externas
+              (repositorios, servicios, BD) sin necesidad de infraestructura real.
+              El ciclo que seguimos es <strong class="text-white">TDD — Red → Green → Refactor</strong>:
+              primero se escribe la prueba que falla (Red), luego el código mínimo que la pasa (Green)
+              y finalmente se limpia sin romper las pruebas (Refactor).
+              <strong class="text-white">JaCoCo</strong> mide la cobertura de ramas e instrucciones alcanzadas
+              por las pruebas, generando el reporte HTML integrado en el pipeline de GitHub Actions.
+            </p>
+          </div>
           <div class="overflow-x-auto rounded-xl mb-4">
             <table class="w-full text-sm data-table">
               <thead><tr><th>Clase de Prueba</th><th class="text-center">Pruebas</th><th class="text-center">Estado</th><th class="text-center">Cobertura</th></tr></thead>
@@ -757,7 +865,7 @@
             <div class="flex flex-col items-center gap-2">
               <div class="w-full max-w-xs rounded-2xl border-2 border-violet-400/40 bg-violet-500/10 py-3 px-6 text-center">
                 <div class="text-[10px] font-bold uppercase tracking-widest text-violet-300 mb-0.5">Capa Exterior — Frameworks e Interfaces</div>
-                <div class="text-xs text-slate-400">Spring Boot · React · MySQL · APIs externas</div>
+                <div class="text-xs text-slate-400">Spring Boot · React · PostgreSQL · APIs externas</div>
               </div>
               <div class="w-px h-3 bg-white/10"></div>
               <div class="w-5/6 max-w-[260px] rounded-2xl border-2 border-blue-400/40 bg-blue-500/10 py-3 px-6 text-center">
@@ -788,7 +896,7 @@
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Independencia de la Base de Datos</h3>
-              <p class="text-sm text-slate-300">Las entidades de dominio no conocen JPA ni MySQL. El repositorio es una interfaz en el dominio; la implementación JPA es un adaptador externo.</p>
+              <p class="text-sm text-slate-300">Las entidades de dominio no conocen JPA ni PostgreSQL. El repositorio es una interfaz en el dominio; la implementación JPA es un adaptador externo.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Independencia de la Interfaz</h3>
@@ -817,7 +925,7 @@
                 <tr><td class="font-bold text-cyan-400">L-1</td><td>Usuario ↔ Frontend React</td><td>React Router + HTTP/S</td><td class="text-slate-400">Cliente → Servidor web</td></tr>
                 <tr><td class="font-bold text-cyan-400">L-2</td><td>Frontend ↔ Backend Java</td><td>REST/JSON + JWT Bearer</td><td class="text-slate-400">React → Spring Boot</td></tr>
                 <tr><td class="font-bold text-cyan-400">L-3</td><td>Frontend ↔ Backend IA</td><td>REST/JSON FastAPI</td><td class="text-slate-400">React → Python</td></tr>
-                <tr><td class="font-bold text-cyan-400">L-4</td><td>Backend Java ↔ Base de Datos</td><td>JPA / Hibernate (Spring Data)</td><td class="text-slate-400">Service → Repository → MySQL</td></tr>
+                <tr><td class="font-bold text-cyan-400">L-4</td><td>Backend Java ↔ Base de Datos</td><td>JPA / Hibernate (Spring Data)</td><td class="text-slate-400">Service → Repository → PostgreSQL</td></tr>
                 <tr><td class="font-bold text-cyan-400">L-5</td><td>Seguridad perimetral</td><td>JWT interceptor (Spring Security)</td><td class="text-slate-400">Todas las solicitudes HTTP</td></tr>
               </tbody>
             </table>
@@ -942,6 +1050,179 @@
     }
 
   </div>
+
+  <!-- ══ SECCIÓN INTEGRADORA — siempre visible ══ -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-10">
+    <div class="glass-card p-6">
+
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+        <h2 class="font-bold text-white">¿De qué manera se integran las 5 tutorías para generar software de calidad?</h2>
+      </div>
+
+      <p class="text-sm text-slate-300 leading-relaxed mb-8">
+        Las cinco unidades forman un <strong class="text-white">sistema de engranajes interdependientes</strong>:
+        los atributos definidos en U1 orientan el diseño de U2; los principios de U2 estructuran el código limpio de U3;
+        U3 hace que las pruebas de U4 sean posibles y confiables; y U4 valida la arquitectura propuesta en U5.
+        Ninguna pieza funciona de forma aislada — juntas garantizan un producto de calidad demostrable.
+      </p>
+
+      <!-- ── Engranajes animados ── -->
+      <div class="flex justify-center items-center gap-2 mb-8 flex-wrap">
+
+        <!-- U1 -->
+        <div class="flex flex-col items-center gap-3">
+          <div class="relative w-24 h-24">
+            <div class="gear-shape gear-spin-cw absolute inset-0" style="background: linear-gradient(135deg,#0891b2,#22d3ee);"></div>
+            <div class="absolute inset-[22px] rounded-full bg-slate-900 flex items-center justify-center">
+              <span class="text-base font-extrabold text-cyan-400">U1</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-cyan-400 text-center leading-tight">Atributos<br>y Métricas</span>
+        </div>
+
+        <div class="w-6 h-px bg-slate-600"></div>
+
+        <!-- U2 -->
+        <div class="flex flex-col items-center gap-3">
+          <div class="relative w-24 h-24">
+            <div class="gear-shape gear-spin-ccw absolute inset-0" style="background: linear-gradient(135deg,#7c3aed,#a78bfa);"></div>
+            <div class="absolute inset-[22px] rounded-full bg-slate-900 flex items-center justify-center">
+              <span class="text-base font-extrabold text-violet-400">U2</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-violet-400 text-center leading-tight">Requisitos<br>y Diseño</span>
+        </div>
+
+        <div class="w-6 h-px bg-slate-600"></div>
+
+        <!-- U3 — larger center gear -->
+        <div class="flex flex-col items-center gap-3">
+          <div class="relative w-28 h-28">
+            <div class="gear-shape gear-spin-cw absolute inset-0" style="background: linear-gradient(135deg,#059669,#34d399);"></div>
+            <div class="absolute inset-[26px] rounded-full bg-slate-900 flex items-center justify-center">
+              <span class="text-base font-extrabold text-emerald-400">U3</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-emerald-400 text-center leading-tight">Código<br>Limpio</span>
+        </div>
+
+        <div class="w-6 h-px bg-slate-600"></div>
+
+        <!-- U4 -->
+        <div class="flex flex-col items-center gap-3">
+          <div class="relative w-24 h-24">
+            <div class="gear-shape gear-spin-ccw absolute inset-0" style="background: linear-gradient(135deg,#b45309,#fbbf24);"></div>
+            <div class="absolute inset-[22px] rounded-full bg-slate-900 flex items-center justify-center">
+              <span class="text-base font-extrabold text-amber-400">U4</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-amber-400 text-center leading-tight">Pruebas</span>
+        </div>
+
+        <div class="w-6 h-px bg-slate-600"></div>
+
+        <!-- U5 -->
+        <div class="flex flex-col items-center gap-3">
+          <div class="relative w-24 h-24">
+            <div class="gear-shape gear-spin-cw absolute inset-0" style="background: linear-gradient(135deg,#be185d,#f472b6);"></div>
+            <div class="absolute inset-[22px] rounded-full bg-slate-900 flex items-center justify-center">
+              <span class="text-base font-extrabold text-pink-400">U5</span>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-pink-400 text-center leading-tight">Arquitectura<br>Limpia</span>
+        </div>
+
+      </div>
+
+      <!-- ── Puntos esenciales por unidad ── -->
+      <div class="grid sm:grid-cols-5 gap-3 mb-8">
+
+        <div class="rounded-xl bg-cyan-500/5 border border-cyan-500/15 p-3">
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-cyan-400 mb-2">U1 — Métricas</p>
+          <ul class="space-y-1 text-xs text-slate-300">
+            <li class="flex gap-1"><span class="text-cyan-400">·</span>ISO/IEC 25010 — 8 atributos</li>
+            <li class="flex gap-1"><span class="text-cyan-400">·</span>287 Puntos Función (PFNA)</li>
+            <li class="flex gap-1"><span class="text-cyan-400">·</span>CC ≤ 10 controlada</li>
+            <li class="flex gap-1"><span class="text-cyan-400">·</span>Cobertura JaCoCo 6%</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl bg-violet-500/5 border border-violet-500/15 p-3">
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-violet-400 mb-2">U2 — Diseño</p>
+          <ul class="space-y-1 text-xs text-slate-300">
+            <li class="flex gap-1"><span class="text-violet-400">·</span>Casos de Uso 2.0</li>
+            <li class="flex gap-1"><span class="text-violet-400">·</span>Modelo 4+1 Kruchten</li>
+            <li class="flex gap-1"><span class="text-violet-400">·</span>MoSCoW priorización</li>
+            <li class="flex gap-1"><span class="text-violet-400">·</span>Requisitos trazados</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl bg-emerald-500/5 border border-emerald-500/15 p-3">
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-emerald-400 mb-2">U3 — Código</p>
+          <ul class="space-y-1 text-xs text-slate-300">
+            <li class="flex gap-1"><span class="text-emerald-400">·</span>SOLID + DRY</li>
+            <li class="flex gap-1"><span class="text-emerald-400">·</span>Funciones ≤ 20 líneas</li>
+            <li class="flex gap-1"><span class="text-emerald-400">·</span>SonarQube + ESLint</li>
+            <li class="flex gap-1"><span class="text-emerald-400">·</span>Duplicación &lt; 5%</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl bg-amber-500/5 border border-amber-500/15 p-3">
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-amber-400 mb-2">U4 — Pruebas</p>
+          <ul class="space-y-1 text-xs text-slate-300">
+            <li class="flex gap-1"><span class="text-amber-400">·</span>43 pruebas — 100% PASS</li>
+            <li class="flex gap-1"><span class="text-amber-400">·</span>TDD Red→Green→Refactor</li>
+            <li class="flex gap-1"><span class="text-amber-400">·</span>Caja Blanca / Gris / Negra</li>
+            <li class="flex gap-1"><span class="text-amber-400">·</span>IEEE 829 compliant</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl bg-pink-500/5 border border-pink-500/15 p-3">
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-pink-400 mb-2">U5 — Arquitectura</p>
+          <ul class="space-y-1 text-xs text-slate-300">
+            <li class="flex gap-1"><span class="text-pink-400">·</span>5 límites definidos</li>
+            <li class="flex gap-1"><span class="text-pink-400">·</span>4 patrones aplicados</li>
+            <li class="flex gap-1"><span class="text-pink-400">·</span>~19 500 LOC totales</li>
+            <li class="flex gap-1"><span class="text-pink-400">·</span>Capas aisladas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ── Resultado global ── -->
+      <div class="rounded-2xl bg-gradient-to-r from-teal-500/10 via-cyan-500/5 to-teal-500/10 border border-teal-400/20 p-6">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 text-center mb-4">Resultado Global — PetStore como Software de Calidad</p>
+        <div class="grid sm:grid-cols-4 gap-4 text-center mb-5">
+          <div class="rounded-xl bg-white/[.04] p-3">
+            <div class="text-3xl font-extrabold text-cyan-300 mb-1">287</div>
+            <div class="text-xs text-slate-400">Puntos Función<br>No Ajustados</div>
+          </div>
+          <div class="rounded-xl bg-white/[.04] p-3">
+            <div class="text-3xl font-extrabold text-emerald-300 mb-1">43</div>
+            <div class="text-xs text-slate-400">Pruebas Automatizadas<br>100% PASS</div>
+          </div>
+          <div class="rounded-xl bg-white/[.04] p-3">
+            <div class="text-3xl font-extrabold text-amber-300 mb-1">~19k</div>
+            <div class="text-xs text-slate-400">Líneas de código<br>Java + React + Python</div>
+          </div>
+          <div class="rounded-xl bg-white/[.04] p-3">
+            <div class="text-3xl font-extrabold text-pink-300 mb-1">5</div>
+            <div class="text-xs text-slate-400">Límites Arquitectónicos<br>bien definidos</div>
+          </div>
+        </div>
+        <p class="text-sm text-slate-300 text-center leading-relaxed">
+          La integración de las cinco tutorías permite que PetStore no sea solo un sistema <em>funcional</em>,
+          sino un sistema de <strong class="text-white">calidad demostrable y medible</strong>:
+          los requisitos están trazados (U2), el código es limpio y sin duplicación (U3),
+          todas las pruebas pasan en CI/CD (U4), la arquitectura es sostenible (U5),
+          y el tamaño funcional y las métricas lo confirman (U1).
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!-- ══ fin sección integradora ══ -->
 
   <footer class="relative z-10 mt-10 border-t border-white/10 bg-slate-900/60 py-5 text-center
                  text-xs text-slate-500 backdrop-blur-sm">
