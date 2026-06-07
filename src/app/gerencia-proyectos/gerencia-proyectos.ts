@@ -16,6 +16,7 @@ export class GerenciaProyectos {
     { id: 'estructura',  label: 'Estructura'                },
     { id: 'riesgos',     label: 'Riesgos'                   },
     { id: 'ejecucion',   label: 'Ejecución'                 },
+    { id: 'cierre',      label: 'Cierre'                    },
     { id: 'imagenes',    label: 'Imágenes'                  },
   ];
 
@@ -32,27 +33,26 @@ export class GerenciaProyectos {
     { name: 'Marketing, Publicidad y Cierre',                 dur: 'Mes 15-16', meses: 2 },
   ];
 
-  // Exactamente 4 riesgos según el Acta de Constitución
   risks = [
     {
-      num: '01', prob: 'Alta',  imp: 'Alto',
-      desc: 'Rotación o falta de disponibilidad de miembros clave del equipo de desarrollo.',
-      mit:  'Documentación continua del código y transferencia de conocimiento entre miembros del equipo.'
+      num: '01', prob: 'Media', imp: 'Alto',
+      desc: 'Rotación o falta de disponibilidad de miembros clave del equipo (desarrolladores, QA).',
+      mit:  'Identificar sustitutos, documentar procesos y garantizar transferencia de conocimiento.'
     },
     {
-      num: '02', prob: 'Media', imp: 'Alto',
-      desc: 'Cambios en los requisitos que generen retrabajo y aumenten los costos del proyecto.',
-      mit:  'Control formal de cambios; congelamiento de requisitos aprobados por fase.'
+      num: '02', prob: 'Alta',  imp: 'Alto',
+      desc: 'Cambios en los requisitos del sistema durante las fases de desarrollo.',
+      mit:  'Implementar proceso formal de control de cambios con aprobación del sponsor.'
     },
     {
-      num: '03', prob: 'Media', imp: 'Alto',
-      desc: 'Fases que superen lo planificado, excediendo la contingencia del 20%.',
-      mit:  'Seguimiento semanal del cronograma Gantt y ajuste de recursos según avance real.'
+      num: '03', prob: 'Media', imp: 'Medio',
+      desc: 'Tiempo estimado de alguna fase supere lo planificado en el Gantt.',
+      mit:  'Reserva de contingencia del 20% y revisiones periódicas de cronograma.'
     },
     {
       num: '04', prob: 'Baja',  imp: 'Alto',
-      desc: 'Vulnerabilidades de seguridad que comprometan datos de clientes y mascotas.',
-      mit:  'Auditorías de seguridad, pruebas de penetración y cifrado de datos sensibles con BCrypt/HTTPS.'
+      desc: 'Fallas de seguridad o vulnerabilidades en la plataforma.',
+      mit:  'Auditorías de seguridad, control de acceso por rol y protección de datos sensibles.'
     },
   ];
 
