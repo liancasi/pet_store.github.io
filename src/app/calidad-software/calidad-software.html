@@ -19,7 +19,7 @@
       Calidad de Software
     </h1>
     <p class="relative z-10 animate-fade-up-delay text-slate-400 text-sm max-w-xl mx-auto mb-1">
-      Sistema PetStore · Aplicacion de principios de calidad en la construccion del software
+      Sistema PetStore · Aplicación de principios de calidad en la construcción del software
     </p>
     <p class="relative z-10 text-slate-500 text-xs">
       Tutor: German Hernandez Rengifo · Universidad del Tolima · IDEAD
@@ -58,7 +58,7 @@
 
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8">
 
-    <!-- ═══ UNIDAD 1: Atributos de calidad, estimacion y metricas ═══ -->
+    <!-- ═══ UNIDAD 1: Atributos de calidad, estimación y métricas ═══ -->
     @if (activeTab === 'u1') {
       <div class="space-y-6 animate-fade-up">
 
@@ -67,14 +67,14 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <div>
               <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Unidad 1</div>
-              <h2 class="font-bold text-white">Atributos de calidad del software, estimacion y metricas</h2>
+              <h2 class="font-bold text-white">Atributos de calidad del software, estimación y métricas</h2>
             </div>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">1. Atributos de calidad</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Estimacion mediante puntos funcion</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Metricas a nivel de codigo fuente</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">4. Metricas en diseno</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Estimación mediante puntos función</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Métricas a nivel de código fuente</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">4. Métricas en diseño</span>
           </div>
         </div>
 
@@ -89,7 +89,7 @@
               <ul class="space-y-1.5 text-sm text-slate-300">
                 <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Completitud:</strong> el sistema cubre todos los requisitos funcionales definidos en el ERS.</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Correctitud:</strong> las funciones producen resultados exactos ante entradas validas.</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Apropiabilidad:</strong> las funciones satisfacen las tareas clinicas y administrativas del cliente.</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Apropiabilidad:</strong> las funciones satisfacen las tareas clínicas y administrativas del cliente.</li>
               </ul>
             </div>
             <div class="rounded-xl bg-blue-500/5 border border-blue-500/15 p-4">
@@ -97,23 +97,23 @@
               <ul class="space-y-1.5 text-sm text-slate-300">
                 <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Tiempo de respuesta:</strong> API menor a 300ms para operaciones CRUD basicas.</li>
                 <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Utilizacion de recursos:</strong> consumo de CPU y memoria dentro de limites aceptables.</li>
-                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Capacidad:</strong> soporte concurrente de hasta 50 usuarios simultaneos.</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Capacidad:</strong> soporte concurrente de hasta 50 usuarios simultáneos.</li>
               </ul>
             </div>
             <div class="rounded-xl bg-violet-500/5 border border-violet-500/15 p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">Seguridad</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
                 <li class="flex gap-2"><span class="text-violet-400">·</span><strong class="text-slate-200">Confidencialidad:</strong> datos clinicos cifrados, acceso solo a usuarios autorizados (JWT).</li>
-                <li class="flex gap-2"><span class="text-violet-400">·</span><strong class="text-slate-200">Integridad:</strong> validacion de entradas, control de concurrencia y auditoria de cambios.</li>
+                <li class="flex gap-2"><span class="text-violet-400">·</span><strong class="text-slate-200">Integridad:</strong> validación de entradas, control de concurrencia y auditoría de cambios.</li>
                 <li class="flex gap-2"><span class="text-violet-400">·</span><strong class="text-slate-200">No repudio:</strong> registro de acciones criticas con usuario y marca de tiempo.</li>
               </ul>
             </div>
             <div class="rounded-xl bg-amber-500/5 border border-amber-500/15 p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Mantenibilidad</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Modularidad:</strong> arquitectura de capas con separacion de responsabilidades (Clean Architecture).</li>
-                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Analizabilidad:</strong> codigo legible y con complejidad ciclomatica maxima de 10.</li>
-                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Testabilidad:</strong> cobertura de pruebas minima del 80% medida con JaCoCo.</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Modularidad:</strong> arquitectura de capas con separación de responsabilidades (Clean Architecture).</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Analizabilidad:</strong> código legible y con complejidad ciclomática máxima de 10.</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span><strong class="text-slate-200">Testabilidad:</strong> cobertura de pruebas mínima del 80% medida con JaCoCo.</li>
               </ul>
             </div>
           </div>
@@ -122,23 +122,23 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Estimacion mediante Puntos Funcion</h2>
+            <h2 class="font-bold text-white">Estimación mediante Puntos Función</h2>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            La estimacion del tamano funcional se realizo mediante la tecnica de
-            <strong class="text-white">Puntos de Funcion No Ajustados (PFNA)</strong> segun el estandar ISO/IEC 20926 (IFPUG).
-            Se identificaron las funciones de usuario y de datos de cada modulo:
+            La estimación del tamaño funcional se realizo mediante la técnica de
+            <strong class="text-white">Puntos de Función No Ajustados (PFNA)</strong> según el estándar ISO/IEC 20926 (IFPUG).
+            Se identificaron las funciones de usuario y de datos de cada módulo:
           </p>
           <div class="overflow-x-auto rounded-xl">
             <table class="w-full text-sm data-table">
-              <thead><tr><th>Modulo</th><th class="text-center">EI</th><th class="text-center">EO</th><th class="text-center">EQ</th><th class="text-center">ILF</th><th class="text-center">PFNA</th></tr></thead>
+              <thead><tr><th>Módulo</th><th class="text-center">EI</th><th class="text-center">EO</th><th class="text-center">EQ</th><th class="text-center">ILF</th><th class="text-center">PFNA</th></tr></thead>
               <tbody>
                 <tr><td class="font-medium text-slate-200">Registro de Clientes / Mascotas</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">5</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">42</td></tr>
                 <tr><td class="font-medium text-slate-200">Agenda de Citas</td><td class="text-center">5</td><td class="text-center">4</td><td class="text-center">6</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">52</td></tr>
-                <tr><td class="font-medium text-slate-200">Historial Clinico</td><td class="text-center">6</td><td class="text-center">5</td><td class="text-center">8</td><td class="text-center">3</td><td class="text-center font-bold text-teal-300">67</td></tr>
+                <tr><td class="font-medium text-slate-200">Historial Clínico</td><td class="text-center">6</td><td class="text-center">5</td><td class="text-center">8</td><td class="text-center">3</td><td class="text-center font-bold text-teal-300">67</td></tr>
                 <tr><td class="font-medium text-slate-200">Control de Inventario</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">5</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">40</td></tr>
-                <tr><td class="font-medium text-slate-200">Facturacion</td><td class="text-center">5</td><td class="text-center">6</td><td class="text-center">4</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">51</td></tr>
-                <tr><td class="font-medium text-slate-200">Modulo IA (recomendaciones)</td><td class="text-center">3</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">35</td></tr>
+                <tr><td class="font-medium text-slate-200">Facturación</td><td class="text-center">5</td><td class="text-center">6</td><td class="text-center">4</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">51</td></tr>
+                <tr><td class="font-medium text-slate-200">Módulo IA (recomendaciones)</td><td class="text-center">3</td><td class="text-center">4</td><td class="text-center">3</td><td class="text-center">2</td><td class="text-center font-bold text-teal-300">35</td></tr>
               </tbody>
               <tfoot>
                 <tr class="bg-teal-500/10">
@@ -154,11 +154,11 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Metricas a Nivel de Codigo Fuente y Diseno</h2>
+            <h2 class="font-bold text-white">Métricas a Nivel de Código Fuente y Diseño</h2>
           </div>
           <div class="overflow-x-auto rounded-xl mb-4">
             <table class="w-full text-sm data-table">
-              <thead><tr><th>Metrica</th><th>Umbral Objetivo</th><th>Estado Actual</th></tr></thead>
+              <thead><tr><th>Métrica</th><th>Umbral Objetivo</th><th>Estado Actual</th></tr></thead>
               <tbody>
                 @for (m of metricas; track m.nombre) {
                   <tr>
@@ -191,40 +191,40 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <div>
               <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Unidad 2</div>
-              <h2 class="font-bold text-white">Calidad en gestion de requisitos, analisis y diseno de software</h2>
+              <h2 class="font-bold text-white">Calidad en gestión de requisitos, análisis y diseño de software</h2>
             </div>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">1. Gestion de requisitos</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">1. Gestión de requisitos</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Casos de uso 2.0</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Modelo 4+1 de Kruchten</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">4. UML para programadores Java</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">5. Errores comunes en requisitos, analisis y diseno</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">6. Optimizacion del analisis y diseno</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">5. Errores comunes en requisitos, análisis y diseño</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">6. Optimizacion del análisis y diseño</span>
           </div>
         </div>
 
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Gestion de Requisitos en PetStore</h2>
+            <h2 class="font-bold text-white">Gestión de Requisitos en PetStore</h2>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            El proceso de gestion de requisitos sigue el estandar
-            <strong class="text-white">IEEE 830 / IEEE 29148</strong> para la redaccion del ERS.
+            El proceso de gestión de requisitos sigue el estándar
+            <strong class="text-white">IEEE 830 / IEEE 29148</strong> para la redacción del ERS.
             Los requisitos se clasifican en funcionales y no funcionales, se priorizan usando MoSCoW y se gestionan con control de versiones.
           </p>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Requisitos Funcionales (RF)</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-01: Registro y autenticacion de usuarios por roles</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-01: Registro y autenticación de usuarios por roles</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RF-02: Registro de clientes y mascotas con historial</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RF-03: Agendamiento de citas con notificaciones</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RF-04: Registro de consultas y prescripciones</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RF-05: Control de inventario con alertas de stock</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-06: Facturacion y generacion de reportes</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-07: Modulo de inteligencia artificial diagnostica</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-06: Facturación y generación de reportes</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RF-07: Módulo de inteligencia artificial diagnostica</li>
               </ul>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
@@ -232,8 +232,8 @@
               <ul class="space-y-1.5 text-sm text-slate-300">
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-01: Disponibilidad del sistema 99% del tiempo</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-02: Respuesta de API menor a 300ms</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-03: Autenticacion segura con JWT y BCrypt</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-04: Cobertura de pruebas minima del 80%</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-03: Autenticación segura con JWT y BCrypt</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-04: Cobertura de pruebas mínima del 80%</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-05: Interfaz responsive compatible con navegadores modernos</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>RNF-06: Datos clinicos bajo normativa de privacidad</li>
               </ul>
@@ -247,7 +247,7 @@
             <h2 class="font-bold text-white">Casos de Uso 2.0</h2>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            Se aplica la tecnica de <strong class="text-white">Casos de Uso 2.0 (Ivar Jacobson)</strong>, que organiza la funcionalidad
+            Se aplica la técnica de <strong class="text-white">Casos de Uso 2.0 (Ivar Jacobson)</strong>, que organiza la funcionalidad
             en rebanadas (use case slices) para la entrega incremental de valor.
           </p>
           <div class="space-y-2">
@@ -256,21 +256,21 @@
                 <span class="w-7 h-7 rounded-full bg-teal-500/30 border border-teal-500/40 flex items-center justify-center text-xs font-bold text-teal-200 flex-shrink-0">UC1</span>
                 <span class="text-sm font-medium text-slate-200">Registrar Mascota</span>
               </div>
-              <p class="text-xs text-slate-400 ml-10">Actor: Recepcionista. Flujo: ingresar datos del propietario y la mascota, asignar ficha clinica, confirmar registro exitoso.</p>
+              <p class="text-xs text-slate-400 ml-10">Actor: Recepcionista. Flujo: ingresar datos del propietario y la mascota, asignar ficha clínica, confirmar registro exitoso.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.07] p-4">
               <div class="flex items-center gap-3 mb-1">
                 <span class="w-7 h-7 rounded-full bg-teal-500/30 border border-teal-500/40 flex items-center justify-center text-xs font-bold text-teal-200 flex-shrink-0">UC2</span>
-                <span class="text-sm font-medium text-slate-200">Gestionar Cita Medica</span>
+                <span class="text-sm font-medium text-slate-200">Gestionar Cita Médica</span>
               </div>
-              <p class="text-xs text-slate-400 ml-10">Actor: Recepcionista / Dueno. Flujo: seleccionar mascota, fecha y hora disponible, confirmar cita, enviar notificacion automatica.</p>
+              <p class="text-xs text-slate-400 ml-10">Actor: Recepcionista / Dueno. Flujo: seleccionar mascota, fecha y hora disponible, confirmar cita, enviar notificación automática.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.07] p-4">
               <div class="flex items-center gap-3 mb-1">
                 <span class="w-7 h-7 rounded-full bg-teal-500/30 border border-teal-500/40 flex items-center justify-center text-xs font-bold text-teal-200 flex-shrink-0">UC3</span>
                 <span class="text-sm font-medium text-slate-200">Registrar Consulta y Prescripcion</span>
               </div>
-              <p class="text-xs text-slate-400 ml-10">Actor: Veterinario. Flujo: acceder a la ficha de la mascota, registrar sintomas, diagnostico, tratamiento y prescripciones medicas.</p>
+              <p class="text-xs text-slate-400 ml-10">Actor: Veterinario. Flujo: acceder a la ficha de la mascota, registrar sintomas, diagnóstico, tratamiento y prescripciones medicas.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.07] p-4">
               <div class="flex items-center gap-3 mb-1">
@@ -289,24 +289,24 @@
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
-              <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista Logica</h3>
-              <p class="text-sm text-slate-300">Diagramas de clases y secuencia que modelan los modulos: Patient, Appointment, Invoice, Inventory, User.</p>
+              <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista Lógica</h3>
+              <p class="text-sm text-slate-300">Diagramas de clases y secuencia que modelan los módulos: Patient, Appointment, Invoice, Inventory, User.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista de Proceso</h3>
-              <p class="text-sm text-slate-300">Diagrama de actividades que muestra el flujo de una consulta: ingreso del paciente, atencion, prescripcion y facturacion.</p>
+              <p class="text-sm text-slate-300">Diagrama de actividades que muestra el flujo de una consulta: ingreso del paciente, atención, prescripcion y facturación.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista de Desarrollo</h3>
-              <p class="text-sm text-slate-300">Estructura de paquetes: controller / service / repository / dto / config. Modelo de tres capas (Presentacion, Negocio, Datos).</p>
+              <p class="text-sm text-slate-300">Estructura de paquetes: controller / service / repository / dto / config. Modelo de tres capas (Presentación, Negocio, Datos).</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Vista Fisica</h3>
-              <p class="text-sm text-slate-300">Servidor cloud: Backend Spring Boot en Docker, base de datos MySQL administrada, frontend React en CDN/hosting estatico.</p>
+              <p class="text-sm text-slate-300">Servidor cloud: Backend Spring Boot en Docker, base de datos MySQL administrada, frontend React en CDN/hosting estático.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4 sm:col-span-2">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Vista de Escenarios (+1)</h3>
-              <p class="text-sm text-slate-300">Casos de uso prioritarios: Registrar mascota, Agendar cita, Registrar consulta, Generar factura — que guian y validan las cuatro vistas anteriores.</p>
+              <p class="text-sm text-slate-300">Casos de uso prioritarios: Registrar mascota, Agendar cita, Registrar consulta, Generar factura — que guían y validan las cuatro vistas anteriores.</p>
             </div>
           </div>
         </div>
@@ -314,27 +314,27 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Errores Comunes y Optimizacion del Analisis y Diseno</h2>
+            <h2 class="font-bold text-white">Errores Comunes y Optimizacion del Análisis y Diseño</h2>
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-rose-500/5 border border-rose-500/15 p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-3">Errores Comunes</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-rose-400">–</span>Requisitos ambiguos sin criterios de aceptacion</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Requisitos ambiguos sin criterios de aceptación</li>
                 <li class="flex gap-2"><span class="text-rose-400">–</span>Clases con multiples responsabilidades (violacion SRP)</li>
-                <li class="flex gap-2"><span class="text-rose-400">–</span>Acoplamiento alto entre capas de la aplicacion</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Acoplamiento alto entre capas de la aplicación</li>
                 <li class="flex gap-2"><span class="text-rose-400">–</span>Omision de casos de uso alternativos y de error</li>
-                <li class="flex gap-2"><span class="text-rose-400">–</span>Diagramas UML no actualizados con el codigo real</li>
+                <li class="flex gap-2"><span class="text-rose-400">–</span>Diagramas UML no actualizados con el código real</li>
               </ul>
             </div>
             <div class="rounded-xl bg-emerald-500/5 border border-emerald-500/15 p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Optimizacion Aplicada</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-emerald-400">+</span>Revision formal de ERS con stakeholders antes de cada fase</li>
-                <li class="flex gap-2"><span class="text-emerald-400">+</span>Aplicacion de patrones de diseno (Repository, DTO, Factory)</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Revisión formal de ERS con stakeholders antes de cada fase</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Aplicación de patrones de diseño (Repository, DTO, Factory)</li>
                 <li class="flex gap-2"><span class="text-emerald-400">+</span>Arquitectura de capas con inyeccion de dependencias Spring</li>
-                <li class="flex gap-2"><span class="text-emerald-400">+</span>Definition of Done con criterios de aceptacion por cada US</li>
-                <li class="flex gap-2"><span class="text-emerald-400">+</span>Documentacion API automatica con Swagger / OpenAPI</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Definition of Done con criterios de aceptación por cada US</li>
+                <li class="flex gap-2"><span class="text-emerald-400">+</span>Documentación API automática con Swagger / OpenAPI</li>
               </ul>
             </div>
           </div>
@@ -343,7 +343,7 @@
       </div>
     }
 
-    <!-- ═══ UNIDAD 3: Codigo limpio ═══ -->
+    <!-- ═══ UNIDAD 3: Código limpio ═══ -->
     @if (activeTab === 'u3') {
       <div class="space-y-6 animate-fade-up">
 
@@ -352,7 +352,7 @@
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
             <div>
               <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Unidad 3</div>
-              <h2 class="font-bold text-white">Codigo Limpio</h2>
+              <h2 class="font-bold text-white">Código Limpio</h2>
             </div>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -360,7 +360,7 @@
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Funciones, variables, comentarios</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Objetos, errores, limites, pruebas</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">4. Clases, concurrencia, refinamiento</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">5. Mejorar el indice de McCabe mediante codigo limpio</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">5. Mejorar el índice de McCabe mediante código limpio</span>
           </div>
         </div>
 
@@ -387,7 +387,7 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Estructura del Codigo — Aplicacion de Codigo Limpio</h2>
+            <h2 class="font-bold text-white">Estructura del Código — Aplicación de Código Limpio</h2>
           </div>
           <div class="grid sm:grid-cols-3 gap-4 mb-5">
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
@@ -403,31 +403,31 @@
               <img src="img/estructura_frontend_react.png" alt="Estructura frontend React" class="w-full" />
             </div>
           </div>
-          <p class="text-xs text-slate-500 mb-4">La estructura de paquetes refleja la separacion de responsabilidades: config / controllers / models / repositories / security / services en el backend Java, y components / contexts / hooks / pages / services / types en el frontend React.</p>
+          <p class="text-xs text-slate-500 mb-4">La estructura de paquetes refleja la separación de responsabilidades: config / controllers / models / repositories / security / services en el backend Java, y components / contexts / hooks / pages / services / types en el frontend React.</p>
         </div>
 
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Reglas de Codigo Limpio en la Implementacion</h2>
+            <h2 class="font-bold text-white">Reglas de Código Limpio en la Implementación</h2>
           </div>
           <div class="grid sm:grid-cols-3 gap-4 mb-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Funciones</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Maximo 20 lineas por metodo</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Un solo nivel de abstraccion</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Máximo 20 líneas por método</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Un solo nivel de abstracción</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Nombres tipo verbo-sustantivo</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Maximo 3 parametros por funcion</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Máximo 3 parámetros por función</li>
               </ul>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Variables y Comentarios</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Nombres que revelen la intencion</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Nombres que revelen la intención</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Sin abreviaturas crípticas (petId no pid)</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Comentarios solo cuando el WHY no es obvio</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Sin codigo comentado en el repositorio</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Sin código comentado en el repositorio</li>
               </ul>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
@@ -444,22 +444,22 @@
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Clases y Concurrencia</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Clases pequenas con responsabilidad unica</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Clases pequenas con responsabilidad única</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>&#64;Transactional para operaciones criticas</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Locks optimistas para control de concurrencia</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Encapsulamiento correcto de atributos</li>
               </ul>
             </div>
             <div class="rounded-xl bg-amber-500/5 border border-amber-500/15 p-4">
-              <h3 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Indice de McCabe (Complejidad Ciclomatica)</h3>
+              <h3 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Índice de McCabe (Complejidad Ciclomática)</h3>
               <p class="text-sm text-slate-300 mb-2">
-                El codigo limpio reduce directamente el indice de McCabe al eliminar ramas innecesarias.
-                PetStore mantiene <strong class="text-white">CC igual o menor a 10</strong> por metodo.
+                El código limpio reduce directamente el índice de McCabe al eliminar ramas innecesarias.
+                PetStore mantiene <strong class="text-white">CC igual o menor a 10</strong> por método.
               </p>
               <ul class="space-y-1 text-sm text-slate-400">
-                <li class="flex gap-2"><span class="text-amber-400">·</span>Extraccion de metodos reemplaza bloques if anidados</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Extracción de métodos reemplaza bloques if anidados</li>
                 <li class="flex gap-2"><span class="text-amber-400">·</span>Polimorfismo sustituye cadenas de switch/case</li>
-                <li class="flex gap-2"><span class="text-amber-400">·</span>Guard clauses reducen la profundidad del codigo</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>Guard clauses reducen la profundidad del código</li>
               </ul>
             </div>
           </div>
@@ -483,7 +483,7 @@
           <div class="flex flex-wrap gap-2">
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">1. Tipos de pruebas de software</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. TDD</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Planificacion de pruebas</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">3. Planificación de pruebas</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">4. Pruebas automatizadas</span>
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">5. JUnit</span>
           </div>
@@ -497,16 +497,16 @@
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Pruebas Unitarias</h3>
-              <p class="text-sm text-slate-300 mb-2">Validan el comportamiento de metodos y clases de forma aislada, usando mocks para dependencias externas.</p>
+              <p class="text-sm text-slate-300 mb-2">Validan el comportamiento de métodos y clases de forma aislada, usando mocks para dependencias externas.</p>
               <ul class="space-y-1 text-sm text-slate-400">
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Herramientas: JUnit 5 + Mockito + AssertJ</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Patron AAA: Arrange, Act, Assert</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Patrón AAA: Arrange, Act, Assert</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Cobertura medida con JaCoCo en CI/CD</li>
               </ul>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
-              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Pruebas de Integracion</h3>
-              <p class="text-sm text-slate-300 mb-2">Verifican la interaccion entre capas: controlador, servicio y repositorio con base de datos real.</p>
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Pruebas de Integración</h3>
+              <p class="text-sm text-slate-300 mb-2">Verifican la interacción entre capas: controlador, servicio y repositorio con base de datos real.</p>
               <ul class="space-y-1 text-sm text-slate-400">
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Herramientas: Spring Boot Test, H2 in-memory</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>&#64;SpringBootTest con contexto completo</li>
@@ -515,20 +515,149 @@
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">TDD — Test Driven Development</h3>
-              <p class="text-sm text-slate-300 mb-2">Metodologia adoptada para el desarrollo de los modulos criticos del sistema.</p>
+              <p class="text-sm text-slate-300 mb-2">Metodología adoptada para el desarrollo de los módulos criticos del sistema.</p>
               <ul class="space-y-1 text-sm text-slate-400">
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Ciclo: Red (prueba falla) → Green (pasa) → Refactor</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Garantiza cobertura desde el primer commit</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Aplicado en autenticacion JWT y logica de citas</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Aplicado en autenticación JWT y lógica de citas</li>
               </ul>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
-              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Pruebas de Aceptacion (UAT)</h3>
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Pruebas de Aceptación (UAT)</h3>
               <p class="text-sm text-slate-300 mb-2">Validan que el sistema cumple los requisitos del cliente en entorno real antes del lanzamiento Beta.</p>
               <ul class="space-y-1 text-sm text-slate-400">
                 <li class="flex gap-2"><span class="text-teal-400">·</span>Escenarios basados en los Casos de Uso 2.0</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Participacion del personal de la clinica veterinaria</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>Aprobacion formal mediante acta de aceptacion</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Participacion del personal de la clínica veterinaria</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>Aprobacion formal mediante acta de aceptación</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Pruebas Funcionales y No Funcionales</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Las pruebas se clasifican según su relación con los atributos de calidad <strong class="text-white">ISO/IEC 25010</strong>:
+            funcionales (verifican comportamiento correcto) y no funcionales (verifican calidad de operación).
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-teal-500/5 border border-teal-500/15 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Atributos Funcionales Verificados</h3>
+              <ul class="space-y-1.5 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Corrección funcional:</strong> resultados exactos ante entradas válidas (PetServiceTest)</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Completitud de datos:</strong> campos requeridos persistidos correctamente</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Entradas inválidas:</strong> excepciones controladas con mensajes claros</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Reglas del negocio:</strong> cliente debe existir para crear mascota; stock reduce al facturar</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Interfaz API:</strong> endpoints REST retornan códigos HTTP correctos (Swagger)</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Interacción usuario:</strong> formularios validan campos antes de enviar (Frontend)</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Chatbot:</strong> responde coherentemente (test_chatbot.py)</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Predictor IA:</strong> genera resultado correcto (test_predictor.py)</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span><strong class="text-slate-200">Paginación:</strong> muestra el número correcto de registros (usePagination.test.ts)</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-blue-500/5 border border-blue-500/15 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Atributos No Funcionales Verificados</h3>
+              <ul class="space-y-1.5 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Fiabilidad:</strong> sistema no falla ante entradas inesperadas</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Mantenibilidad:</strong> código en capas SOLID, fácil de modificar</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Verificabilidad:</strong> cada módulo tiene pruebas automatizadas (JUnit + Pytest)</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Seguridad:</strong> autenticación JWT verificada — JwtTokenProviderTest (13 pruebas)</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Disponibilidad:</strong> contexto Spring arranca correctamente (PetStoreApplicationTests)</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Interoperabilidad:</strong> API REST documentada con Swagger / OpenAPI</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Usabilidad:</strong> flujos de UI probados con Vitest en React</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Eficiencia:</strong> tests con Mockito (sin BD real) reducen tiempo de ejecución</li>
+                <li class="flex gap-2"><span class="text-blue-400">·</span><strong class="text-slate-200">Portabilidad:</strong> pruebas corren en GitHub Actions (Ubuntu) sin cambios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Clasificación por Caja: Blanca, Gris y Negra</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Según el nivel de acceso al código interno, las pruebas se clasifican en tres tipos (Box Testing):
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-xl bg-white/[.07] border border-white/25 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-white mb-2">Caja Blanca</h3>
+              <p class="text-xs text-slate-400 mb-3">Se conoce el código interno — lógica, bifurcaciones y flujos.</p>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-white">·</span>PetServiceTest.java</li>
+                <li class="flex gap-2"><span class="text-white">·</span>JwtTokenProviderTest.java</li>
+                <li class="flex gap-2"><span class="text-white">·</span>test_predictor.py</li>
+                <li class="flex gap-2"><span class="text-white">·</span>test_chatbot.py</li>
+                <li class="flex gap-2"><span class="text-white">·</span>usePagination.test.ts</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-slate-700/40 border border-slate-500/30 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-2">Caja Gris</h3>
+              <p class="text-xs text-slate-400 mb-3">Acceso parcial — interfaz conocida, no toda la implementación.</p>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-slate-300">·</span>PetStoreApplicationTests (J-07)</li>
+                <li class="flex gap-2"><span class="text-slate-300">·</span>test_api.py (P-12, P-13)</li>
+                <li class="flex gap-2"><span class="text-slate-300">·</span>Swagger / OpenAPI (contrato)</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-slate-900/70 border border-slate-700/60 p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Caja Negra</h3>
+              <p class="text-xs text-slate-400 mb-3">Sin conocer el código — solo se evalúa entrada/salida visible.</p>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-slate-400">·</span>M-01: Login (UI completa)</li>
+                <li class="flex gap-2"><span class="text-slate-400">·</span>M-02: Gestión de Mascotas (UI)</li>
+                <li class="flex gap-2"><span class="text-slate-400">·</span>M-03: Chatbot IA (UI completa)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Plan de Pruebas — 24 Casos Automatizados (IEEE 829 · TDD)</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            El plan sigue el estándar <strong class="text-white">IEEE 829</strong> con ciclo TDD
+            <strong class="text-white">Red → Green → Refactor</strong>. Se definieron 5 casos estratégicos:
+            PetServiceTest, JwtTokenProviderTest, test_predictor, test_chatbot y usePagination.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Java — JUnit 5 · 7 casos (J-01 a J-07)</h3>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-01: Guardar mascota válida</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-02: Cliente inexistente lanza excepción</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-03: Listar mascotas por cliente</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-04: Actualizar mascota existente</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-05: Eliminar mascota por ID</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-06: Validar token JWT generado</li>
+                <li class="flex gap-2"><span class="text-amber-400">·</span>J-07: Contexto Spring arranca (integración)</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Python — Pytest · 13 casos (P-01 a P-13)</h3>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2 font-semibold"><span class="text-blue-400">P-01–P-09:</span><span class="ml-1">test_predictor.py (IA)</span></li>
+                <li class="flex gap-2 ml-4 text-slate-400"><span class="text-blue-400">→</span>Predictor con datos válidos</li>
+                <li class="flex gap-2 ml-4 text-slate-400"><span class="text-blue-400">→</span>Respuesta sin BD real (mock)</li>
+                <li class="flex gap-2 ml-4 text-slate-400"><span class="text-blue-400">→</span>Manejo de errores de entrada</li>
+                <li class="flex gap-2 font-semibold mt-1"><span class="text-blue-400">P-10–P-13:</span><span class="ml-1">test_chatbot.py</span></li>
+                <li class="flex gap-2 ml-4 text-slate-400"><span class="text-blue-400">→</span>Chatbot responde coherentemente</li>
+                <li class="flex gap-2 ml-4 text-slate-400"><span class="text-blue-400">→</span>Respuesta ante fallo de IA</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Frontend — Vitest · 4 casos (F-01 a F-04)</h3>
+              <ul class="space-y-1 text-sm text-slate-300">
+                <li class="flex gap-2"><span class="text-teal-400">·</span>F-01: Paginación en módulo mascotas</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>F-02: Chatbot con error de IA</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>F-03: Predictor sin persistir en BD</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>F-04: Validación campos formulario mascotas</li>
               </ul>
             </div>
           </div>
@@ -557,37 +686,37 @@
               <tfoot>
                 <tr class="bg-teal-500/10">
                   <td class="px-4 py-3 font-bold text-white">TOTAL</td>
-                  <td class="px-4 py-3 text-center font-extrabold text-white">60</td>
+                  <td class="px-4 py-3 text-center font-extrabold text-white">43</td>
                   <td class="px-4 py-3 text-center font-bold text-emerald-300">PASS</td>
-                  <td class="px-4 py-3 text-center font-extrabold text-teal-300">88%</td>
+                  <td class="px-4 py-3 text-center font-extrabold text-teal-300">JaCoCo 6%</td>
                 </tr>
               </tfoot>
             </table>
           </div>
-          <p class="text-xs text-slate-500">Resultados ejecutados con JUnit 5 + Mockito. Cobertura medida con JaCoCo integrada en el pipeline GitHub Actions.</p>
+          <p class="text-xs text-slate-500">26 pruebas Java BUILD SUCCESS · 13 pruebas Python Pytest · 4 pruebas Frontend Vitest · Total: 43. JaCoCo Java: config 41%, security 3%, services 4%, total 6%.</p>
         </div>
 
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Ubicacion y Archivos de Tests en el Proyecto</h2>
+            <h2 class="font-bold text-white">Ubicación y Archivos de Tests en el Proyecto</h2>
           </div>
           <div class="grid sm:grid-cols-2 gap-4 mb-4">
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
-              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Backend Java</div>
-              <img src="img/ubicacion_test_backend_java.png" alt="Ubicacion tests backend Java" class="w-full" />
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicación Tests Backend Java</div>
+              <img src="img/ubicación_test_backend_java.png" alt="Ubicación tests backend Java" class="w-full" />
             </div>
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
               <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Archivos de Tests Backend Java (JUnit)</div>
               <img src="img/archivo_tests_backend_java.png" alt="Archivos tests backend Java" class="w-full" />
             </div>
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
-              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Frontend React (Vitest)</div>
-              <img src="img/ubicacion_test_front_react.png" alt="Ubicacion tests frontend" class="w-full" />
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicación Tests Frontend React (Vitest)</div>
+              <img src="img/ubicación_test_front_react.png" alt="Ubicación tests frontend" class="w-full" />
             </div>
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
-              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicacion Tests Backend Python</div>
-              <img src="img/ubicacion_tests_bakcend_python.png" alt="Ubicacion tests backend Python" class="w-full" />
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Ubicación Tests Backend Python</div>
+              <img src="img/ubicación_tests_bakcend_python.png" alt="Ubicación tests backend Python" class="w-full" />
             </div>
           </div>
           <div class="grid sm:grid-cols-3 gap-4">
@@ -596,8 +725,8 @@
               <img src="img/archivo_test_chatbot_front_react.png" alt="Test chatbot frontend" class="w-full" />
             </div>
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
-              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Paginacion (React)</div>
-              <img src="img/archivo_test_paginacion_front_react.png" alt="Test paginacion frontend" class="w-full" />
+              <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Paginación (React)</div>
+              <img src="img/archivo_test_paginación_front_react.png" alt="Test paginación frontend" class="w-full" />
             </div>
             <div class="rounded-xl overflow-hidden border border-white/10 bg-white/[.02]">
               <div class="px-3 py-2 bg-white/[.04] border-b border-white/[.07] text-[11px] font-semibold text-slate-400">Test Predictor IA (React)</div>
@@ -623,7 +752,7 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">1. Arquitectura, independencia y limites</span>
-            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Politica, reglas del negocio y arquitectura limpia</span>
+            <span class="rounded-full bg-teal-500/10 border border-teal-500/20 px-3 py-1 text-xs text-teal-300">2. Política, reglas del negocio y arquitectura limpia</span>
           </div>
         </div>
 
@@ -635,7 +764,7 @@
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
             PetStore adopta los principios de <strong class="text-white">Arquitectura Limpia (Clean Architecture)</strong>
             de Robert C. Martin. Las dependencias siempre apuntan hacia adentro: desde la infraestructura hacia las reglas del negocio.
-            El nucleo del sistema es independiente del framework, la base de datos y la interfaz de usuario.
+            El núcleo del sistema es independiente del framework, la base de datos y la interfaz de usuario.
           </p>
           <div class="rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 p-6 mb-4">
             <div class="flex flex-col items-center gap-2">
@@ -650,11 +779,11 @@
               </div>
               <div class="w-px h-3 bg-white/10"></div>
               <div class="w-4/6 max-w-[220px] rounded-2xl border-2 border-teal-400/40 bg-teal-500/10 py-3 px-6 text-center">
-                <div class="text-[10px] font-bold uppercase tracking-widest text-teal-300 mb-0.5">Casos de Uso — Servicios de Aplicacion</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-teal-300 mb-0.5">Casos de Uso — Servicios de Aplicación</div>
               </div>
               <div class="w-px h-3 bg-white/10"></div>
               <div class="w-3/6 max-w-[180px] rounded-2xl border-2 border-cyan-400/40 bg-cyan-500/10 py-3 px-6 text-center">
-                <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-300 mb-0.5">Nucleo — Entidades y Reglas del Negocio</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-cyan-300 mb-0.5">Núcleo — Entidades y Reglas del Negocio</div>
               </div>
             </div>
           </div>
@@ -668,11 +797,11 @@
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Independencia del Framework</h3>
-              <p class="text-sm text-slate-300">Las entidades y servicios de dominio no importan clases de Spring Boot. La logica de negocio puede ejecutarse en cualquier entorno Java sin el framework.</p>
+              <p class="text-sm text-slate-300">Las entidades y servicios de dominio no importan clases de Spring Boot. La lógica de negocio puede ejecutarse en cualquier entorno Java sin el framework.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Independencia de la Base de Datos</h3>
-              <p class="text-sm text-slate-300">Las entidades de dominio no conocen JPA ni MySQL. El repositorio es una interfaz en el dominio; la implementacion JPA es un adaptador externo.</p>
+              <p class="text-sm text-slate-300">Las entidades de dominio no conocen JPA ni MySQL. El repositorio es una interfaz en el dominio; la implementación JPA es un adaptador externo.</p>
             </div>
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Independencia de la Interfaz</h3>
@@ -681,6 +810,94 @@
             <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
               <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Testabilidad</h3>
               <p class="text-sm text-slate-300">La independencia permite probar las reglas del negocio con JUnit sin levantar el contexto de Spring Boot, reduciendo el tiempo de ejecucion de pruebas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Límites Arquitectónicos en PetStore</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Un límite arquitectónico define la frontera entre dos componentes del sistema,
+            qué tecnología se usa para cruzarla y en qué dirección fluye la dependencia.
+          </p>
+          <div class="overflow-x-auto rounded-xl">
+            <table class="w-full text-sm data-table">
+              <thead><tr><th>Límite</th><th>Componentes</th><th>Mecanismo</th><th>Dirección</th></tr></thead>
+              <tbody>
+                <tr><td class="font-bold text-cyan-400">L-1</td><td>Usuario ↔ Frontend React</td><td>React Router + HTTP/S</td><td class="text-slate-400">Cliente → Servidor web</td></tr>
+                <tr><td class="font-bold text-cyan-400">L-2</td><td>Frontend ↔ Backend Java</td><td>REST/JSON + JWT Bearer</td><td class="text-slate-400">React → Spring Boot</td></tr>
+                <tr><td class="font-bold text-cyan-400">L-3</td><td>Frontend ↔ Backend IA</td><td>REST/JSON FastAPI</td><td class="text-slate-400">React → Python</td></tr>
+                <tr><td class="font-bold text-cyan-400">L-4</td><td>Backend Java ↔ Base de Datos</td><td>JPA / Hibernate (Spring Data)</td><td class="text-slate-400">Service → Repository → MySQL</td></tr>
+                <tr><td class="font-bold text-cyan-400">L-5</td><td>Seguridad perimetral</td><td>JWT interceptor (Spring Security)</td><td class="text-slate-400">Todas las solicitudes HTTP</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Patrones Arquitectónicos Aplicados</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Arquitectura en Capas (Layered)</h3>
+              <p class="text-sm text-slate-300">Controller → Service → Repository → Model. Cada capa depende solo de la inmediatamente inferior.</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Repository Pattern</h3>
+              <p class="text-sm text-slate-300">Spring Data JPA abstrae el acceso a datos. Los servicios usan interfaces de repositorio, no SQL directo.</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">API Gateway (api.ts)</h3>
+              <p class="text-sm text-slate-300">Un único módulo centraliza todas las llamadas HTTP al backend, inyectando el JWT automáticamente.</p>
+            </div>
+            <div class="rounded-xl bg-white/[.04] border border-white/[.08] p-4">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Módulos de Dominio (Frontend)</h3>
+              <p class="text-sm text-slate-300">Código organizado por dominio: mascotas, citas, facturación, IA — cada uno con sus páginas, componentes y servicios propios.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-5 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">Métricas de Líneas de Código (LOC) por Capa</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">Backend Java (Spring Boot)</p>
+              <div class="overflow-x-auto rounded-xl">
+                <table class="w-full text-sm data-table">
+                  <thead><tr><th>Capa</th><th class="text-center">Clases</th><th class="text-right">LOC aprox.</th></tr></thead>
+                  <tbody>
+                    <tr><td>Controllers</td><td class="text-center">14</td><td class="text-right text-slate-200">~1 200</td></tr>
+                    <tr><td>Services</td><td class="text-center">14</td><td class="text-right text-slate-200">~3 500</td></tr>
+                    <tr><td>Repositories</td><td class="text-center">10</td><td class="text-right text-slate-200">~300</td></tr>
+                    <tr><td>Models</td><td class="text-center">20</td><td class="text-right text-slate-200">~2 000</td></tr>
+                    <tr><td>Security / Config</td><td class="text-center">8</td><td class="text-right text-slate-200">~900</td></tr>
+                  </tbody>
+                  <tfoot><tr class="bg-amber-500/10"><td class="px-4 py-2 font-bold text-white" colspan="2">Total Java</td><td class="px-4 py-2 text-right font-extrabold text-amber-300">~7 900</td></tr></tfoot>
+                </table>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Frontend React (TypeScript)</p>
+              <div class="overflow-x-auto rounded-xl">
+                <table class="w-full text-sm data-table">
+                  <thead><tr><th>Capa</th><th class="text-center">Archivos</th><th class="text-right">LOC aprox.</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pages</td><td class="text-center">12</td><td class="text-right text-slate-200">~7 000</td></tr>
+                    <tr><td>Components</td><td class="text-center">7</td><td class="text-right text-slate-200">~2 500</td></tr>
+                    <tr><td>Services</td><td class="text-center">3</td><td class="text-right text-slate-200">~1 500</td></tr>
+                    <tr><td>Contexts</td><td class="text-center">3</td><td class="text-right text-slate-200">~600</td></tr>
+                  </tbody>
+                  <tfoot><tr class="bg-teal-500/10"><td class="px-4 py-2 font-bold text-white" colspan="2">Total React</td><td class="px-4 py-2 text-right font-extrabold text-teal-300">~11 600</td></tr></tfoot>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -705,7 +922,7 @@
         <div class="glass-card p-6">
           <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
             <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-            <h2 class="font-bold text-white">Politica, Reglas del Negocio y Arquitectura Limpia</h2>
+            <h2 class="font-bold text-white">Política, Reglas del Negocio y Arquitectura Limpia</h2>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed mb-4">
             En Clean Architecture, las <strong class="text-white">reglas del negocio</strong> son la parte mas valiosa del sistema.
@@ -718,17 +935,17 @@
               <ul class="space-y-1.5 text-sm text-slate-300">
                 <li class="flex gap-2"><span class="text-cyan-400">·</span>Una mascota pertenece a exactamente un propietario registrado.</li>
                 <li class="flex gap-2"><span class="text-cyan-400">·</span>Una cita no puede solaparse con otra del mismo veterinario.</li>
-                <li class="flex gap-2"><span class="text-cyan-400">·</span>El historial clinico es inmutable una vez registrado por el veterinario.</li>
+                <li class="flex gap-2"><span class="text-cyan-400">·</span>El historial clínico es inmutable una vez registrado por el veterinario.</li>
                 <li class="flex gap-2"><span class="text-cyan-400">·</span>Un medicamento no puede dispensarse si su stock es cero.</li>
               </ul>
             </div>
             <div class="rounded-xl bg-teal-500/5 border border-teal-500/15 p-4">
-              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Casos de Uso — Reglas de la Aplicacion</h3>
+              <h3 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Casos de Uso — Reglas de la Aplicación</h3>
               <ul class="space-y-1.5 text-sm text-slate-300">
-                <li class="flex gap-2"><span class="text-teal-400">·</span>AgendarCitaUseCase: valida disponibilidad y envia notificacion automatica.</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>RegistrarConsultaUseCase: crea el registro clinico y actualiza el historial.</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>AgendarCitaUseCase: valida disponibilidad y envia notificación automática.</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>RegistrarConsultaUseCase: crea el registro clínico y actualiza el historial.</li>
                 <li class="flex gap-2"><span class="text-teal-400">·</span>GenerarFacturaUseCase: calcula el total y emite el comprobante digital.</li>
-                <li class="flex gap-2"><span class="text-teal-400">·</span>AlertarStockUseCase: notifica cuando el inventario cae por debajo del minimo.</li>
+                <li class="flex gap-2"><span class="text-teal-400">·</span>AlertarStockUseCase: notifica cuando el inventario cae por debajo del mínimo.</li>
               </ul>
             </div>
           </div>
@@ -741,7 +958,7 @@
 
   <footer class="relative z-10 mt-10 border-t border-white/10 bg-slate-900/60 py-5 text-center
                  text-xs text-slate-500 backdrop-blur-sm">
-    <strong class="text-slate-300">PetStore</strong> · Universidad del Tolima · IDEAD · Ingenieria de Sistemas · 2026
+    <strong class="text-slate-300">PetStore</strong> · Universidad del Tolima · IDEAD · Ingeniería de Sistemas · 2026
     · Tutor: German Hernandez Rengifo
   </footer>
 
