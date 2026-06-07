@@ -1049,23 +1049,20 @@
       </div>
     }
 
-  </div>
+    @if (activeTab === 'u6') {
+      <div>
 
-  <!-- ══ SECCIÓN INTEGRADORA — siempre visible ══ -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-10">
-    <div class="glass-card p-6">
-
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
-        <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
-        <h2 class="font-bold text-white">¿De qué manera se integran las 5 tutorías para generar software de calidad?</h2>
-      </div>
-
-      <p class="text-sm text-slate-300 leading-relaxed mb-8">
-        Las cinco unidades forman un <strong class="text-white">sistema de engranajes interdependientes</strong>:
-        los atributos definidos en U1 orientan el diseño de U2; los principios de U2 estructuran el código limpio de U3;
-        U3 hace que las pruebas de U4 sean posibles y confiables; y U4 valida la arquitectura propuesta en U5.
-        Ninguna pieza funciona de forma aislada — juntas garantizan un producto de calidad demostrable.
-      </p>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+            <div class="w-1 h-6 rounded-full bg-gradient-to-b from-teal-400 to-cyan-400"></div>
+            <h2 class="font-bold text-white">¿De qué manera se integran las 5 tutorías para generar software de calidad?</h2>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-8">
+            Las cinco unidades forman un <strong class="text-white">sistema de engranajes interdependientes</strong>:
+            los atributos definidos en U1 orientan el diseño de U2; los principios de U2 estructuran el código limpio de U3;
+            U3 hace que las pruebas de U4 sean posibles y confiables; y U4 valida la arquitectura propuesta en U5.
+            Ninguna pieza funciona de forma aislada — juntas garantizan un producto de calidad demostrable.
+          </p>
 
       <!-- ── Engranajes animados ── -->
       <div class="flex justify-center items-center gap-2 mb-8 flex-wrap">
@@ -1220,9 +1217,11 @@
         </p>
       </div>
 
-    </div>
+        </div>
+      </div>
+    }
+
   </div>
-  <!-- ══ fin sección integradora ══ -->
 
   <footer class="relative z-10 mt-10 border-t border-white/10 bg-slate-900/60 py-5 text-center
                  text-xs text-slate-500 backdrop-blur-sm">

@@ -15,6 +15,7 @@ export class CalidadSoftware {
     { id: 'u3', label: 'Unidad 3', title: 'Código Limpio'          },
     { id: 'u4', label: 'Unidad 4', title: 'Pruebas'                },
     { id: 'u5', label: 'Unidad 5', title: 'Arquitectura Limpia'    },
+    { id: 'u6', label: 'Conclusiones', title: 'Integración y Conclusiones' },
   ];
 
   solid = [
